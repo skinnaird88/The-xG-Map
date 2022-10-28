@@ -1,3 +1,14 @@
+# The xG Map brief
+Expected goals (xG) is a contemporary metric in football statistics. It is used to measure the likelihood that any given shot at goal in a football match will result in a goal. xG illustrates for us the quality and quantity of chances that a team, or individual player, has created in a single match or series of multiple matches.
+
+The xG map will be designed in order to give a user, such as a player scout, an interactive football pitch graphic. This UI will allow them to select certain areas of the pitch from which to record shots and goals. They will also be able to input the locations of opposition players, which reduces the xG value of a shot.
+
+# MVP
+A user should be able to:
+* Click on the pitch graphic to record goals, shots and defenders.
+* Record player statistics in a form which interacts with the pitch.
+* View player data reports which are compiled using data which is entered on the front-end and persisted to the database.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
