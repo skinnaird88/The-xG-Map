@@ -1,0 +1,26 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+/* 
+#defenders{
+    padding-top: 0%;
+    padding-left: 0%;
+    height:  3.3rem;
+    width: 8rem;
+}
+
+#shot{
+    padding-top: 0%;
+    padding-left: 0%;
+    height: 6.7rem;
+    width: 4rem;
+}
+
+#goal{
+    padding-top: 0%;
+    padding-left: 0%;
+    height: 6.7rem;
+    width: 4rem;
+} */
