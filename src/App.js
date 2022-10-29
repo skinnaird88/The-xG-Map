@@ -11,8 +11,8 @@ function App() {
   // const [expectedGoals, setExpectedGoals] = useState();
 
   const recordGoal = () =>{
-    setGoals += 1;
-    console.log(setGoals)
+    setGoals(goals +1);
+    console.log(goals)
   }
 
   return (
