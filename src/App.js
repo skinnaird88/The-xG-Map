@@ -8,11 +8,15 @@ import './App.css';
 function App() {
 
   const [goals, setGoals] = useState(0);
-  // const [expectedGoals, setExpectedGoals] = useState();
+  const [expectedGoals, setExpectedGoals] = useState(0);
 
   const recordGoal = () =>{
     setGoals(goals +1);
-    console.log(goals)
+  }
+
+  const recordShot = (value) =>{
+    setExpectedGoals(expectedGoals + value)
+    console.log(expectedGoals)
   }
 
   return (
@@ -22,7 +26,8 @@ function App() {
           <Route path="/"
           element={
             <Dashboard
-            recordGoal={recordGoal}/>
+            recordGoal={recordGoal}
+            recordShot={recordShot}/>
           }></Route>
         </Routes>
       </Router>
