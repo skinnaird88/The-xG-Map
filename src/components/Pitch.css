@@ -1,0 +1,22 @@
+#pitch-container{
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    width: 40rem;
+    background-color: black;
+    color: red;
+    background: url('../../public/pitch.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#row{
+    display: flex;
+}
+
+#box{
+    padding-top: 0%;
+    padding-left: 0%;
+    height:  10rem;
+    width: 8rem;
+}

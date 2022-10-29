@@ -1,9 +1,12 @@
 import React from 'react'
+import Pitch from '../components/Pitch'
 
-const Dashboard = () => {
+const Dashboard = ( {recordGoal} ) => {
   return (
-    <div>Dashboard
-        <h1>hi</h1>
+    <div>
+        <h1>Hi</h1>
+        <div><Pitch recordGoal={recordGoal}/></div>
+        {/* <div><Form/></div> */}
     </div>
   )
 }
