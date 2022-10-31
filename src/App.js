@@ -18,11 +18,14 @@ function App() {
 
   const recordShot = (value) =>{
     setExpectedGoals(expectedGoals + value)
-    console.log(expectedGoals)
+    console.log("xg count " + expectedGoals)
   }
 
   const addDefender = () =>{
     setDefenders(defenders +1);
+    // set max number of defenders that can be added to 3
+    (defenders != 3)
+    console.log("Def count " + defenders)
   }
 
   return (

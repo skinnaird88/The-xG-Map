@@ -4,15 +4,6 @@ import './Pitch.css'
 
 const Pitch = ( {recordGoal, recordShot, addDefender} ) => {
 
-    // const handleClick = () => {
-    //     recordGoal();
-    // }
-
-    // const handleShotClick = () => {
-    //     recordShot(0.5);
-    // }
-
-
 
     const rowEntries = 
     (   <>

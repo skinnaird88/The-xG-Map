@@ -11,12 +11,16 @@ const handleShotClick = () => {
     recordShot(0.5);
 }
 
+const handleAddDefender = () => {
+  addDefender();
+}
+
 
   return (
     <>
-    <div className="selectButton">Defenders</div>
-    <div className="selectButton" onClick={handleClick}>Goals</div>
-    <div className="selectButton" onClick={handleShotClick}>Shots</div>
+    <button className="selectButton" onClick={handleAddDefender}>Defenders</button>
+    <button className="selectButton" onClick={handleClick}>Goals</button>
+    <button className="selectButton" onClick={handleShotClick}>Shots</button>
     </>
     ) 
 }

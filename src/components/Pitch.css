@@ -26,4 +26,6 @@
 
 .selectButton{
     height: 33.3%;
+    background: transparent;
+    border: none;
 }
