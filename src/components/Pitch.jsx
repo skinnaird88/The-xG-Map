@@ -12,44 +12,40 @@ const Pitch = ( {recordGoal, recordShot} ) => {
         recordShot(0.5);
     }
 
+    const rowEntries = 
+    (   <>
+    <div className="box" onClick={handleShotClick}><ShotArea/></div>
+    <div className="box" onClick={handleClick}><ShotArea/></div>
+    <div className="box" onClick={handleClick}><ShotArea/></div>
+    <div className="box" onClick={handleClick}><ShotArea/></div>
+    <div className="box" onClick={handleClick}><ShotArea/></div> 
+    </>
+    )
+
   return (
-    <div id="pitch-container">
-        <div id="row">
-            <div id="box" onClick={handleShotClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
+    <section id="pitch-container">
+        <div className="row">
+        {rowEntries}
+
         </div>
-        <div id="row">
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
+        <div className="row">
+        {rowEntries}
+
+
         </div>
-        <div id="row">
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
+        <div className="row">
+        {rowEntries}
+
         </div>
-        <div id="row">
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
+        <div className="row">
+        {rowEntries}
+
         </div>
-        <div id="row">
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
-            <div id="box" onClick={handleClick}><ShotArea/></div>
+        <div className="row">
+        {rowEntries}
+
         </div>
-    </div>
+    </section>
     )
 }
 
