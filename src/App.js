@@ -13,7 +13,7 @@ function App() {
 
   const recordGoal = () =>{
     setGoals(goals +1);
-    console.log(goals)
+    console.log("Goal count " + goals)
   }
 
   const recordShot = (value) =>{
@@ -22,10 +22,13 @@ function App() {
   }
 
   const addDefender = () =>{
-    setDefenders(defenders +1);
+    if(defenders <= 2){
+      setDefenders(defenders +1)
+    }
+    else{ return defenders}
+    // setDefenders(defenders +1);
     // set max number of defenders that can be added to 3
-    (defenders != 3)
-    console.log("Def count " + defenders)
+
   }
 
   return (
@@ -37,7 +40,8 @@ function App() {
             <Dashboard
             recordGoal={recordGoal}
             recordShot={recordShot}
-            addDefender={addDefender}/>
+            addDefender={addDefender}
+            defenders={defenders}/>
           }></Route>
         </Routes>
       </Router>

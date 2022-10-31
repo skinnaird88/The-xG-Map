@@ -1,7 +1,7 @@
 import React from 'react'
 import './ShotArea.css'
 
-const ShotArea = ( {recordGoal, recordShot, addDefender} ) => {
+const ShotArea = ( {recordGoal, recordShot, addDefender, defenders} ) => {
 
   const handleClick = () => {
     recordGoal();
@@ -13,6 +13,8 @@ const handleShotClick = () => {
 
 const handleAddDefender = () => {
   addDefender();
+  console.log("Def count " + defenders)
+
 }
 
 

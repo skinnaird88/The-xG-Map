@@ -1,11 +1,12 @@
 import React from 'react'
 import Pitch from '../components/Pitch'
 
-const Dashboard = ( { recordGoal, recordShot, addDefender} ) => {
+const Dashboard = ( { recordGoal, recordShot, addDefender, defenders} ) => {
   return (
     <div>
         <h1>Hi</h1>
-        <div><Pitch 
+        <div><Pitch
+        defenders={defenders}
         recordGoal={recordGoal}
         recordShot={recordShot}
         addDefender={addDefender}/></div>
