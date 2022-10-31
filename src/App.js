@@ -9,14 +9,20 @@ function App() {
 
   const [goals, setGoals] = useState(0);
   const [expectedGoals, setExpectedGoals] = useState(0);
+  const [defenders, setDefenders] = useState(0);
 
   const recordGoal = () =>{
     setGoals(goals +1);
+    console.log(goals)
   }
 
   const recordShot = (value) =>{
     setExpectedGoals(expectedGoals + value)
     console.log(expectedGoals)
+  }
+
+  const addDefender = () =>{
+    setDefenders(defenders +1);
   }
 
   return (
@@ -27,7 +33,8 @@ function App() {
           element={
             <Dashboard
             recordGoal={recordGoal}
-            recordShot={recordShot}/>
+            recordShot={recordShot}
+            addDefender={addDefender}/>
           }></Route>
         </Routes>
       </Router>

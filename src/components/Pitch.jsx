@@ -2,23 +2,28 @@ import React from 'react'
 import ShotArea from './ShotArea'
 import './Pitch.css'
 
-const Pitch = ( {recordGoal, recordShot} ) => {
+const Pitch = ( {recordGoal, recordShot, addDefender} ) => {
 
-    const handleClick = () => {
-        recordGoal();
-    }
+    // const handleClick = () => {
+    //     recordGoal();
+    // }
 
-    const handleShotClick = () => {
-        recordShot(0.5);
-    }
+    // const handleShotClick = () => {
+    //     recordShot(0.5);
+    // }
+
+
 
     const rowEntries = 
     (   <>
-    <div className="box" onClick={handleShotClick}><ShotArea/></div>
-    <div className="box" onClick={handleClick}><ShotArea/></div>
-    <div className="box" onClick={handleClick}><ShotArea/></div>
-    <div className="box" onClick={handleClick}><ShotArea/></div>
-    <div className="box" onClick={handleClick}><ShotArea/></div> 
+    <div className="box"><ShotArea
+            recordGoal={recordGoal}
+            recordShot={recordShot}
+            addDefender={addDefender}/></div>
+    <div className="box" ><ShotArea/></div>
+    <div className="box" ><ShotArea/></div>
+    <div className="box" ><ShotArea/></div>
+    <div className="box" ><ShotArea/></div> 
     </>
     )
 
