@@ -27,5 +27,6 @@
 .selectButton{
     height: 33.3%;
     background: transparent;
-    border: none;
+    border-width: 0.5px;
+    border-color: white;
 }

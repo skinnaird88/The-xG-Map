@@ -4,6 +4,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
+import Header from './components/Header';
+import NavBar from './components/NavBar';
 
 function App() {
 
@@ -26,14 +28,14 @@ function App() {
       setDefenders(defenders +1)
     }
     else{ return defenders}
-    // setDefenders(defenders +1);
-    // set max number of defenders that can be added to 3
 
   }
 
   return (
     <div>
       <Router>
+        <Header/>
+        <NavBar/>
         <Routes>
           <Route path="/"
           element={

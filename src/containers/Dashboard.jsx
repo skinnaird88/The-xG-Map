@@ -4,7 +4,6 @@ import Pitch from '../components/Pitch'
 const Dashboard = ( { recordGoal, recordShot, addDefender, defenders} ) => {
   return (
     <div>
-        <h1>Hi</h1>
         <div><Pitch
         defenders={defenders}
         recordGoal={recordGoal}
