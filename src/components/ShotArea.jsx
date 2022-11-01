@@ -1,4 +1,5 @@
 import React from 'react'
+import Defender from './Defender'
 import './ShotArea.css'
 
 const ShotArea = ( {recordGoal, recordShot, addDefender, defenders} ) => {
@@ -13,14 +14,17 @@ const handleShotClick = () => {
 
 const handleAddDefender = () => {
   addDefender();
-  console.log("Def count " + defenders)
 
 }
 
 
   return (
     <>
-    <button className="selectButton" onClick={handleAddDefender}>Defenders</button>
+    <button 
+    className="selectButton" 
+    onClick={handleAddDefender}>
+      <Defender addDefender={handleAddDefender} defenders={defenders}/></button>
+
     <button className="selectButton" onClick={handleClick}>Goals</button>
     <button className="selectButton" onClick={handleShotClick}>Shots</button>
     </>
