@@ -9,7 +9,7 @@ const ShotArea = ( {recordGoal, recordShot, addDefender, defenders} ) => {
 }
 
 const handleShotClick = () => {
-    recordShot(0.5);
+    recordShot();
 }
 
 const handleAddDefender = () => {

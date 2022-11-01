@@ -7,10 +7,12 @@ import './App.css';
 import Header from './components/Header';
 import NavBar from './components/NavBar';
 
+const serverUrl = "http://localhost:8080"
+
 function App() {
 
   const [goals, setGoals] = useState(0);
-  const [expectedGoals, setExpectedGoals] = useState(0);
+  const [expectedGoals, setExpectedGoals] = useState(0.01);
   const [defenders, setDefenders] = useState(0);
 
   const recordGoal = () =>{

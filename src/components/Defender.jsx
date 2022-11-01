@@ -28,7 +28,7 @@ const Defender = ({ addDefender, defenders }) => {
     </div>
     )
   }
-  console.log("Def count " + defenders)
+  // console.log("Def count " + defenders)
 
   return (
     <>
