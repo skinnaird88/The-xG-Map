@@ -1,4 +1,5 @@
 import React from 'react'
+import Key from '../components/Key'
 import Pitch from '../components/Pitch'
 
 const Dashboard = ( { recordGoal, recordShot, addDefender, defenders} ) => {
@@ -9,6 +10,7 @@ const Dashboard = ( { recordGoal, recordShot, addDefender, defenders} ) => {
         recordGoal={recordGoal}
         recordShot={recordShot}
         addDefender={addDefender}/></div>
+        <div><Key/></div>
         {/* <div><Form/></div> */}
     </div>
   )

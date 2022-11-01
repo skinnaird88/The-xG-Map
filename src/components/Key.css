@@ -1,0 +1,12 @@
+.keyContainer{
+    width: 20rem;
+    background-color: brown;
+    color: white;
+    border-radius: 2.5rem;
+    text-align: center;
+}
+
+.keyItem{
+    max-height: 7rem;
+    max-width: auto;
+}
