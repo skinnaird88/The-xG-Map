@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import Dashboard from "./containers/Dashboard"
+import ReportList from './containers/ReportList';
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -11,13 +12,13 @@ const serverUrl = "http://localhost:8080"
 
 function App() {
 
-  const [goals, setGoals] = useState(0);
+  const [totalGoals, setTotalGoals] = useState(0);
   const [totalExpectedGoals, setTotalExpectedGoals] = useState(0.00);
   const [defenders, setDefenders] = useState(0);
 
   const recordGoal = () =>{
-    setGoals(goals +1);
-    console.log("Goal count " + goals)
+    setTotalGoals(totalGoals +1);
+    console.log("Goal count " + totalGoals)
   }
 
   const recordShot = (xgValue) =>{
@@ -45,8 +46,15 @@ function App() {
             recordShot={recordShot}
             addDefender={addDefender}
             defenders={defenders}
-            totalExpectedGoals={totalExpectedGoals}/>
+            totalExpectedGoals={totalExpectedGoals}
+            totalGoals={totalGoals}/>
           }></Route>
+          <Route path="/reports"
+          element={
+            <ReportList/>
+          }>
+
+          </Route>
         </Routes>
       </Router>
     </div>

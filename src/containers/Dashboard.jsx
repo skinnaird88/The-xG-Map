@@ -4,8 +4,14 @@ import Pitch from '../components/Pitch'
 import Form from '../components/Form'
 import './Dashboard.css'
 
-const Dashboard = ( { recordGoal, recordShot, addDefender, defenders, totalExpectedGoals} ) => {
-  return (
+const Dashboard = ( { recordGoal, 
+  recordShot, 
+  addDefender, 
+  defenders, 
+  totalExpectedGoals, 
+  totalGoals} ) => {
+  
+    return (
     <div className='dashboard'>
         <div><Pitch
           defenders={defenders}
@@ -14,7 +20,8 @@ const Dashboard = ( { recordGoal, recordShot, addDefender, defenders, totalExpec
           addDefender={addDefender}/></div>
         <div><Key/></div>
         <div><Form
-        totalExpectedGoals={totalExpectedGoals}/></div>
+        totalExpectedGoals={totalExpectedGoals}
+        totalGoals={totalGoals}/></div>
     </div>
   )
 }
