@@ -16,6 +16,10 @@ function App() {
   const [totalExpectedGoals, setTotalExpectedGoals] = useState(0.00);
   const [defenders, setDefenders] = useState(0);
 
+  const [allReports, setAllReports] = useState([]);
+
+  
+
   const recordGoal = () =>{
     setTotalGoals(totalGoals +1);
     console.log("Goal count " + totalGoals)
