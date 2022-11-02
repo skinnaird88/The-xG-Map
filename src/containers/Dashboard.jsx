@@ -1,9 +1,10 @@
 import React from 'react'
 import Key from '../components/Key'
 import Pitch from '../components/Pitch'
+import Form from '../components/Form'
 import './Dashboard.css'
 
-const Dashboard = ( { recordGoal, recordShot, addDefender, defenders} ) => {
+const Dashboard = ( { recordGoal, recordShot, addDefender, defenders, totalExpectedGoals} ) => {
   return (
     <div className='dashboard'>
         <div><Pitch
@@ -12,7 +13,8 @@ const Dashboard = ( { recordGoal, recordShot, addDefender, defenders} ) => {
           recordShot={recordShot}
           addDefender={addDefender}/></div>
         <div><Key/></div>
-        {/* <div><Form/></div> */}
+        <div><Form
+        totalExpectedGoals={totalExpectedGoals}/></div>
     </div>
   )
 }

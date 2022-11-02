@@ -21,7 +21,7 @@ function App() {
   }
 
   const recordShot = (xgValue) =>{
-    // some logiv with defenders effecting the ammount being set below 
+    // some logic with defenders affecting the amount being set below 
     setTotalExpectedGoals(totalExpectedGoals + xgValue)
     console.log("xg count " + totalExpectedGoals)
   }
@@ -44,7 +44,8 @@ function App() {
             recordGoal={recordGoal}
             recordShot={recordShot}
             addDefender={addDefender}
-            defenders={defenders}/>
+            defenders={defenders}
+            totalExpectedGoals={totalExpectedGoals}/>
           }></Route>
         </Routes>
       </Router>
