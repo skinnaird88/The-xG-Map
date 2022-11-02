@@ -12,7 +12,7 @@ const serverUrl = "http://localhost:8080"
 function App() {
 
   const [goals, setGoals] = useState(0);
-  const [expectedGoals, setExpectedGoals] = useState(0.01);
+  const [totalExpectedGoals, setTotalExpectedGoals] = useState(0.00);
   const [defenders, setDefenders] = useState(0);
 
   const recordGoal = () =>{
@@ -20,17 +20,16 @@ function App() {
     console.log("Goal count " + goals)
   }
 
-  const recordShot = (value) =>{
-    setExpectedGoals(expectedGoals + value)
-    console.log("xg count " + expectedGoals)
+  const recordShot = (xgValue) =>{
+    // some logiv with defenders effecting the ammount being set below 
+    setTotalExpectedGoals(totalExpectedGoals + xgValue)
+    console.log("xg count " + totalExpectedGoals)
   }
 
   const addDefender = () =>{
     if(defenders <= 2){
       setDefenders(defenders +1)
     }
-    else{ return defenders}
-
   }
 
   return (

@@ -1,65 +1,29 @@
-import React from 'react'
-import ShotArea from './ShotArea'
-import './Pitch.css'
+import React from "react";
+import ShotArea from "./ShotArea";
+import "./Pitch.css";
+const Pitch = ({ recordGoal, recordShot, addDefender, defenders }) => {
+        // create array of xg value for each shot area
+        const xGValuesArray = [0.1, 0.2, 0.3, 0.4, 0.5];
+        // map through array to assign different xg value to each shot area
+        const shotAreas = xGValuesArray.map((xGValue) => {
+                return (
+                        <div className="box">
+                                <ShotArea
+                                        recordGoal={recordGoal}
+                                        recordShot={recordShot}
+                                        addDefender={addDefender}
+                                        defenders={defenders}
+                                        xGValue={xGValue}
+                                />
+                        </div>
+                );
+        });
 
-const Pitch = ( {recordGoal, recordShot, addDefender, defenders} ) => {
+        return (
+                <section id="pitch-container">
+                        {shotAreas}
+                </section>
+        );
+};
 
-
-    const rowEntries = 
-    (   <>
-    <div className="box"><ShotArea
-            defenders={defenders}
-            recordGoal={recordGoal}
-            recordShot={recordShot}
-            addDefender={addDefender}/></div>
-    <div className="box"><ShotArea
-            defenders={defenders}
-            recordGoal={recordGoal}
-            recordShot={recordShot}
-            addDefender={addDefender}/></div>
-    <div className="box"><ShotArea
-            defenders={defenders}
-            recordGoal={recordGoal}
-            recordShot={recordShot}
-            addDefender={addDefender}/></div>
-    <div className="box"><ShotArea
-            defenders={defenders}
-            recordGoal={recordGoal}
-            recordShot={recordShot}
-            addDefender={addDefender}/></div>
-    <div className="box"><ShotArea
-            defenders={defenders}
-            recordGoal={recordGoal}
-            recordShot={recordShot}
-            addDefender={addDefender}/></div>
-    </>
-    )
-
-  return (
-    <section id="pitch-container">
-        <div className="row">
-        {rowEntries}
-
-        </div>
-        <div className="row">
-        {rowEntries}
-
-
-        </div>
-        <div className="row">
-        {rowEntries}
-
-        </div>
-        <div className="row">
-        {rowEntries}
-
-        </div>
-        <div className="row">
-        {rowEntries}
-
-        </div>
-    </section>
-    )
-}
-
-export default Pitch
+export default Pitch;

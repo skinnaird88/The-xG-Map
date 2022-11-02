@@ -2,18 +2,21 @@ import React from 'react'
 import Defender from './Defender'
 import './ShotArea.css'
 
-const ShotArea = ( {recordGoal, recordShot, addDefender, defenders} ) => {
+const ShotArea = ( {recordGoal, recordShot, addDefender, defenders, xGValue } ) => {
 
   const handleClick = () => {
     recordGoal();
 }
 
 const handleShotClick = () => {
-    recordShot();
+    recordShot(xGValue);
+    console.log(xGValue)
 }
 
 const handleAddDefender = () => {
   addDefender();
+  // addDefender();
+  // sector area 
 
 }
 
