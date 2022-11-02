@@ -18,7 +18,11 @@ function App() {
 
   const [allReports, setAllReports] = useState([]);
 
-
+  useEffect(() => {
+    getReports().then((data) => {
+      setAllReports(data);
+    });
+  }, []);
 
   const recordGoal = () =>{
     setTotalGoals(totalGoals +1);
