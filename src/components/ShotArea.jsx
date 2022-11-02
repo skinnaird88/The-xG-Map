@@ -15,8 +15,7 @@ const handleShotClick = () => {
 
 const handleAddDefender = () => {
   addDefender();
-  // addDefender();
-  // sector area 
+
 
 }
 
