@@ -2,13 +2,13 @@ import logo from './logo.svg';
 import Dashboard from "./containers/Dashboard"
 import ReportList from './containers/ReportList';
 import React from 'react';
+import { getReports} from './xgMapService';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Header from './components/Header';
 import NavBar from './components/NavBar';
 
-const serverUrl = "http://localhost:8080"
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
 
   const [allReports, setAllReports] = useState([]);
 
-  
+
 
   const recordGoal = () =>{
     setTotalGoals(totalGoals +1);
@@ -55,7 +55,7 @@ function App() {
           }></Route>
           <Route path="/reports"
           element={
-            <ReportList/>
+            <ReportList getReports={getReports}/>
           }>
 
           </Route>
