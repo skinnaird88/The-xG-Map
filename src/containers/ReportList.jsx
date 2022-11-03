@@ -1,4 +1,5 @@
 import React from 'react'
+import './ReportList.css'
 import Report from '../components/Report'
 
 const ReportList = (  { allReports, setAllReports } ) => {
@@ -12,16 +13,12 @@ const ReportList = (  { allReports, setAllReports } ) => {
 
 return(
   <div>
-    <ul>
+    <ul className='report-grid'>
       {playerReportNodes}
     </ul>
   </div>
 )
 
-
 }
-
-  
-
 
 export default ReportList

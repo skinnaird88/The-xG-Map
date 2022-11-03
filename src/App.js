@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import Dashboard from "./containers/Dashboard"
 import ReportList from './containers/ReportList';
 import React from 'react';
-import { getReports} from './xgMapService';
+import { getReports, postReport} from './xgMapService';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
@@ -21,7 +21,6 @@ function App() {
   useEffect(() => {
     getReports().then((data) => {
       setAllReports(data);
-      console.log(data)
     });
   }, []);
 
@@ -42,6 +41,10 @@ function App() {
     }
   }
 
+  const addNewReport = (report) => {
+    postReport(report).then((savedReport) => setAllReports([...allReports, savedReport]))
+  }
+
   return (
     <div>
       <Router>
@@ -56,7 +59,8 @@ function App() {
             addDefender={addDefender}
             defenders={defenders}
             totalExpectedGoals={totalExpectedGoals}
-            totalGoals={totalGoals}/>
+            totalGoals={totalGoals}
+            onReportSubmit={(report) => addNewReport(report)}/>
           }></Route>
           <Route path="/reports"
           element={

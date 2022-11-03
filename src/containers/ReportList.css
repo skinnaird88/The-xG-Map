@@ -1,0 +1,10 @@
+.report-grid{
+    display: flex;
+    flex-direction: space-between;
+    
+}
+
+
+p{
+    color: red;
+}
