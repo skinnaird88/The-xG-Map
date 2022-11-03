@@ -9,6 +9,96 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders }) => {
         const xGValuesArrayRow4 = [0.33, 0.6, 0.7, 0.33, 0.44];
         const xGValuesArrayRow5 = [0.35, 0.04, 0.4, 0.67, 0.07];
         // map through array to assign different xg value to each shot area
+
+
+//           const row1 = [{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   }]
+//   const row2 = [{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   }]
+//   const row3 = [{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   }]
+//   const row5 = [{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   }]
+//   const row5 = [{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   },{
+//     defenders: 0,
+//     xg: 0.9
+//   }]
+
+
+//   const pitch = [row1, row2,row3,row4,row5]
+
+// Create a stateful representation of the pitch
+// each item in the 2d array represents a section of the pitch
+// hold the current state in each item
+// onClick one of shot areas 
         const shotAreasRow1 = xGValuesArrayRow1.map((xGValue) => {
                 return (
                         <div className="box">

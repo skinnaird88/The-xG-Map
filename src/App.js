@@ -15,8 +15,9 @@ function App() {
   const [totalGoals, setTotalGoals] = useState(0);
   const [totalExpectedGoals, setTotalExpectedGoals] = useState(0.00);
   const [defenders, setDefenders] = useState(0);
-
   const [allReports, setAllReports] = useState([]);
+
+
 
   useEffect(() => {
     getReports().then((data) => {
