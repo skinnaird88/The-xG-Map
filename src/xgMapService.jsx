@@ -9,6 +9,8 @@ export const getReports = () => {
 
 export const postReport = (report) => {
     return fetch(serverUrl, {
-        method: 'POST'
+        method: 'POST',
+        body: JSON.stringify(report)
     })
+    .then(res => res.json())
 }

@@ -16,9 +16,8 @@ public class PlayerController {
     @GetMapping(value="/players")
     public ResponseEntity getALlPlayersAndFilters(
             @RequestParam(required = false, name = "name") String name,
-            @RequestParam(required = false, name = "team") String team,
-//            @RequestParam(required = false, name = "expectedGoals") double xG,
-            @RequestParam(required = false, name = "goals") Integer goals
+            @RequestParam(required = false, name = "age") Integer age,
+            @RequestParam(required = false, name = "team") String team
     ){
         return new ResponseEntity(playerRepository.findAll(), HttpStatus.OK);
     }

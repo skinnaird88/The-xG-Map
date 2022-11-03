@@ -17,22 +17,15 @@ public class Player {
     private int age;
 
 
-    @Column(name = "goals")
-    private Integer goals;
-
-    @Column(name = "xG")
-    private double expectedGoals;
-
     @ManyToOne
     @JoinColumn(name = "team_id", nullable = false)
     private Team team;
 
-    public Player(String name, int age, Team team,double expectedGoals, Integer goals) {
+    public Player(String name, int age, Team team) {
         this.name = name;
         this.age = age;
         this.team = team;
-        this.expectedGoals = expectedGoals;
-        this.goals = goals;
+
     }
 
     public Player() {
@@ -70,19 +63,5 @@ public class Player {
         this.id = id;
     }
 
-    public Integer getGoals() {
-        return goals;
-    }
 
-    public void setGoals(Integer goals) {
-        this.goals = goals;
-    }
-
-    public double getExpectedGoals() {
-        return expectedGoals;
-    }
-
-    public void setExpectedGoals(double expectedGoals) {
-        this.expectedGoals = expectedGoals;
-    }
 }

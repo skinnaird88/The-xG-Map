@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './Form.css'
 
-const Form = ( { totalExpectedGoals, totalGoals, onReportSubmit } ) => {
+const Form = ( { totalExpectedGoals, totalGoals, addNewReport } ) => {
 
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
@@ -12,26 +12,26 @@ const Form = ( { totalExpectedGoals, totalGoals, onReportSubmit } ) => {
     setName(evt.target.value)
   };
   const handleAgeChange= (evt) => {
-    setAge()
+    setAge(evt.target.value)
   };
   const handleTeamChange= (evt) => {
-    setTeam()
+    setTeam(evt.target.value)
   };
 
   const handleReportSubmit = (e) =>{
-   
+    e.preventDefault();
     const reportData = {
-      "name":name, 
-      "age": 
-      "expectedGoals": 
-      "goals": 
-      "team": {
-        "id" : 
-      }
+      "name": name, 
+      "age": age,
+      "team": team
     }
-    // postReport(reportData)
+    
+    addNewReport(reportData)
+    console.log(reportData)
 
-    setName = ""
+    setName ("")
+    setAge("")
+    setTeam("")
 
   }
 

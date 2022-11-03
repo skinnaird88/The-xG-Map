@@ -60,7 +60,7 @@ function App() {
             defenders={defenders}
             totalExpectedGoals={totalExpectedGoals}
             totalGoals={totalGoals}
-            onReportSubmit={(report) => addNewReport(report)}/>
+            addNewReport={addNewReport}/>
           }></Route>
           <Route path="/reports"
           element={

@@ -10,7 +10,7 @@ const Dashboard = ( { recordGoal,
   defenders, 
   totalExpectedGoals, 
   totalGoals,
-  onReportSubmit} ) => {
+  addNewReport} ) => {
   
     return (
     <div className='dashboard'>
@@ -23,7 +23,7 @@ const Dashboard = ( { recordGoal,
         <div><Form
         totalExpectedGoals={totalExpectedGoals}
         totalGoals={totalGoals}
-        onReportSubmit={onReportSubmit}/></div>
+        addNewReport={addNewReport}/></div>
     </div>
   )
 }
