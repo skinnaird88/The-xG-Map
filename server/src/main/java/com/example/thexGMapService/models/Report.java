@@ -25,11 +25,11 @@ public class Report {
     @Column(name = "xG")
     private double expectedGoals;
 
-    public Report(Integer goals, double expectedGoals) {
+    public Report(Integer goals, double expectedGoals, Player player, Team team) {
         this.goals = goals;
         this.expectedGoals = expectedGoals;
-        this.player = new Player();
-        this.team = new Team();
+        this.player = player;
+        this.team = team;
     }
 
     public Report() {

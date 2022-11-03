@@ -1,6 +1,8 @@
 package com.example.thexGMapService.models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "players")
@@ -16,6 +18,8 @@ public class Player {
     @Column(name = "age")
     private int age;
 
+    @OneToMany(mappedBy = "player")
+    private List<Report> reports;
 
     @ManyToOne
     @JoinColumn(name = "team_id", nullable = false)
@@ -25,10 +29,19 @@ public class Player {
         this.name = name;
         this.age = age;
         this.team = team;
+        this.reports = new ArrayList<>();
 
     }
 
     public Player() {
+    }
+
+    public List<Report> getReports() {
+        return reports;
+    }
+
+    public void setReports(List<Report> reports) {
+        this.reports = reports;
     }
 
     public String getName() {

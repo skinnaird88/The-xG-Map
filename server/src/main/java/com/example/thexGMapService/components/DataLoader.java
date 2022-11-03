@@ -1,8 +1,10 @@
 package com.example.thexGMapService.components;
 
 import com.example.thexGMapService.models.Player;
+import com.example.thexGMapService.models.Report;
 import com.example.thexGMapService.models.Team;
 import com.example.thexGMapService.repositories.PlayerRepository;
+import com.example.thexGMapService.repositories.ReportRepository;
 import com.example.thexGMapService.repositories.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
@@ -19,6 +21,8 @@ public class DataLoader implements ApplicationRunner {
 
     @Autowired
     TeamRepository teamRepository;
+    @Autowired
+    ReportRepository reportRepository;
 
     public DataLoader() {
     }
@@ -27,10 +31,10 @@ public class DataLoader implements ApplicationRunner {
         Team team1 = new Team("Liverpool");
         teamRepository.save(team1);
 
-        Player player1 = new Player("Ben Doak", 20, team1, 0.88, 0);
+        Player player1 = new Player("Ben Doak", 20, team1);
         playerRepository.save(player1);
 
-        Player player2 = new Player("Harvey Elliott", 21, team1,0.00, 0);
+        Player player2 = new Player("Harvey Elliott", 21, team1);
         playerRepository.save(player2);
 
         Team team2 = new Team("Ajax");
@@ -39,11 +43,14 @@ public class DataLoader implements ApplicationRunner {
         Team team3 = new Team("Bonnyrigg Rose");
         teamRepository.save(team3);
 
-        Player player3 = new Player("David Kalokoh", 19, team2, 0.00, 0);
+        Player player3 = new Player("David Kalokoh", 19, team2);
         playerRepository.save(player3);
 
-        Player player4 = new Player("Ross Miller", 18, team3, 0.00, 0);
+        Player player4 = new Player("Ross Miller", 18, team3);
         playerRepository.save(player4);
+
+        Report report1 = new Report(2, 0.9, player1, team3);
+        reportRepository.save(report1);
     }
 
 }
