@@ -1,12 +1,11 @@
 package com.example.thexGMapService.controllers;
 
+import com.example.thexGMapService.models.Player;
 import com.example.thexGMapService.repositories.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PlayerController {
@@ -22,5 +21,16 @@ public class PlayerController {
             @RequestParam(required = false, name = "goals") Integer goals
     ){
         return new ResponseEntity(playerRepository.findAll(), HttpStatus.OK);
+    }
+
+    @GetMapping(value = "/players/{id}")
+    public ResponseEntity getPlayer(@PathVariable Long id){
+        return new ResponseEntity<>(playerRepository.findById(id), HttpStatus.OK);
+    }
+
+    @PostMapping(value = "/players")
+    public ResponseEntity<Player> postPlayer(@RequestBody Player player){
+        playerRepository.save(player);
+        return new ResponseEntity<>(player, HttpStatus.CREATED);
     }
 }

@@ -14,7 +14,7 @@ public class PlayerTest {
 
     @Before
     public void before(){
-        player1 = new Player("Ben Doak", 20, Liverpool);
+        player1 = new Player("Ben Doak", 20, Liverpool, 0.00, 0);
     }
 
     @Test

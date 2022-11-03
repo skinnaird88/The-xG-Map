@@ -27,10 +27,10 @@ public class DataLoader implements ApplicationRunner {
         Team team1 = new Team("Liverpool");
         teamRepository.save(team1);
 
-        Player player1 = new Player("Ben Doak", 20, team1);
+        Player player1 = new Player("Ben Doak", 20, team1, 0.88, 0);
         playerRepository.save(player1);
 
-        Player player2 = new Player("Harvey Elliott", 21, team1);
+        Player player2 = new Player("Harvey Elliott", 21, team1,0.00, 0);
         playerRepository.save(player2);
 
         Team team2 = new Team("Ajax");
@@ -39,10 +39,10 @@ public class DataLoader implements ApplicationRunner {
         Team team3 = new Team("Bonnyrigg Rose");
         teamRepository.save(team3);
 
-        Player player3 = new Player("David Kalokoh", 19, team2);
+        Player player3 = new Player("David Kalokoh", 19, team2, 0.00, 0);
         playerRepository.save(player3);
 
-        Player player4 = new Player("Ross Miller", 18, team3);
+        Player player4 = new Player("Ross Miller", 18, team3, 0.00, 0);
         playerRepository.save(player4);
     }
 

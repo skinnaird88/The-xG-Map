@@ -27,10 +27,12 @@ public class Player {
     @JoinColumn(name = "team_id", nullable = false)
     private Team team;
 
-    public Player(String name, int age, Team team) {
+    public Player(String name, int age, Team team,double expectedGoals, Integer goals) {
         this.name = name;
         this.age = age;
         this.team = team;
+        this.expectedGoals = expectedGoals;
+        this.goals = goals;
     }
 
     public Player() {
@@ -58,5 +60,29 @@ public class Player {
 
     public void setTeam(Team team) {
         this.team = team;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getGoals() {
+        return goals;
+    }
+
+    public void setGoals(Integer goals) {
+        this.goals = goals;
+    }
+
+    public double getExpectedGoals() {
+        return expectedGoals;
+    }
+
+    public void setExpectedGoals(double expectedGoals) {
+        this.expectedGoals = expectedGoals;
     }
 }
