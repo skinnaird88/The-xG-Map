@@ -4,5 +4,5 @@ const serverUrl = "http://localhost:8080/players"
 
 export const getReports = () => {
     return fetch(serverUrl)
-        .then(res => console.log(res))
+        .then(res => res.json())
 }

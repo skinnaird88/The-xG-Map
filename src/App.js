@@ -21,6 +21,7 @@ function App() {
   useEffect(() => {
     getReports().then((data) => {
       setAllReports(data);
+      console.log(data)
     });
   }, []);
 
@@ -59,7 +60,9 @@ function App() {
           }></Route>
           <Route path="/reports"
           element={
-            <ReportList getReports={getReports}/>
+            <ReportList 
+            allReports={allReports}
+            setAllReports={setAllReports}/>
           }>
 
           </Route>
