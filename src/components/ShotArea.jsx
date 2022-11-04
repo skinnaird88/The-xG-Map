@@ -23,7 +23,7 @@ const handleAddDefender = () => {
   return (
     <>
     <button 
-    className="selectButton" 
+    className="selectButton" id='defender'
     onClick={handleAddDefender}>
       <Defender addDefender={handleAddDefender} defenders={defenders}/></button>
 

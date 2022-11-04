@@ -1,25 +1,4 @@
-/* .wrapper{
-    display: grid; */
-
-/* } */
-/* 
-#defenders{
-    padding-top: 0%;
-    padding-left: 0%;
-    height:  3.3rem;
-    width: 8rem;
+#defender :hover{
+    color: white;
+    background-color: aqua;
 }
-
-#shot{
-    padding-top: 0%;
-    padding-left: 0%;
-    height: 6.7rem;
-    width: 4rem;
-}
-
-#goal{
-    padding-top: 0%;
-    padding-left: 0%;
-    height: 6.7rem;
-    width: 4rem;
-} */

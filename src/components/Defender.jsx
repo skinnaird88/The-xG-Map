@@ -4,14 +4,14 @@ import './Defender.css'
 const Defender = ({ addDefender, defenders }) => {
 
   let totalDefenders;
-  if(defenders == 1){
+  if(defenders === 1){
     totalDefenders = (
       <div>
         <img className="defender" src="./defender.png"></img>
       </div>
     )
   }
-  else if(defenders == 2){
+  else if(defenders === 2){
     totalDefenders = (
       <div>
       <img className="defender" src="./defender.png"></img>
@@ -19,7 +19,7 @@ const Defender = ({ addDefender, defenders }) => {
     </div>
     )
   }
-  else if(defenders == 3){
+  else if(defenders === 3){
     totalDefenders = (
       <div>
       <img className="defender" src="./defender.png"></img>

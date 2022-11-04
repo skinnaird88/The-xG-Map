@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import ShotArea from "./ShotArea";
 import "./Pitch.css";
-const Pitch = ({ recordGoal, recordShot, addDefender, defenders }) => {
+const Pitch = ({ recordGoal, recordShot, addDefender, defenders, indexRow1, setIndexRow1 }) => {
         // create array of xg value for each shot area
                 
         const xGValuesArrayRow1 = [0.3, 0.6, 0.9, 0.02, 0.01];
+        
         const xGValuesArrayRow2 = [0.3, 0.6, 0.9, 0.02, 0.01];
         const xGValuesArrayRow3 = [0.08, 0.79, 0.11, 0.5, 0.23];
         const xGValuesArrayRow4 = [0.33, 0.6, 0.7, 0.33, 0.44];
         const xGValuesArrayRow5 = [0.35, 0.04, 0.4, 0.67, 0.07];
         // map through array to assign different xg value to each shot area
 
+        // const [defenderCountArrayRow1, setDefenderCountArrayRow1] = useState([0, 0, 0, 0, 0])
 
 //           const row1 = [{
 //     defenders: 0,
@@ -97,10 +99,13 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders }) => {
 //   const pitch = [row1, row2,row3,row4,row5]
 
 // Create a stateful representation of the pitch
-// each item in the 2d array represents a section of the pitch
+// each item in the 2nd array represents a section of the pitch
 // hold the current state in each item
 // onClick one of shot areas 
+
+
         const shotAreasRow1 = xGValuesArrayRow1.map((xGValue) => {
+                // setIndexRow1( indexRow1 += 1)
                 return (
                         <div className="box">
                                 <ShotArea

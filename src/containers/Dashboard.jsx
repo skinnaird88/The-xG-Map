@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import Key from '../components/Key'
 import Pitch from '../components/Pitch'
 import Form from '../components/Form'
@@ -11,6 +11,9 @@ const Dashboard = ( { recordGoal,
   totalExpectedGoals, 
   totalGoals,
   addNewReport} ) => {
+
+  // const [indexRow1, setIndexRow1] = useState(-1);
+
   
     return (
     <div className='dashboard'>
@@ -18,7 +21,8 @@ const Dashboard = ( { recordGoal,
           defenders={defenders}
           recordGoal={recordGoal}
           recordShot={recordShot}
-          addDefender={addDefender}/></div>
+          addDefender={addDefender}
+          /></div>
         <div><Key/></div>
         <div><Form
         totalExpectedGoals={totalExpectedGoals}
