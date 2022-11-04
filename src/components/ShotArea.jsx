@@ -1,8 +1,11 @@
-import React from 'react'
+import React, {useState}from 'react'
 import Defender from './Defender'
 import './ShotArea.css'
 
 const ShotArea = ( {recordGoal, recordShot, addDefender, defenders, xGValue } ) => {
+
+  const [defnederShowNumber, setDefnederShowNumber] = useState(0)
+
 
   const handleGoalClick = () => {
     recordGoal(xGValue);
@@ -14,8 +17,11 @@ const handleShotClick = () => {
 }
 
 const handleAddDefender = () => {
-  addDefender();
+  if(defnederShowNumber < 3 && defenders < 3){
+    setDefnederShowNumber(defnederShowNumber + 1)
+    addDefender();
 
+  }
 
 }
 
@@ -25,7 +31,7 @@ const handleAddDefender = () => {
     <button 
     className="selectButton" id='defender'
     onClick={handleAddDefender}>
-      <Defender addDefender={handleAddDefender} defenders={defenders}/></button>
+      <Defender addDefender={handleAddDefender} defenders={defnederShowNumber}/></button>
 
     <button className="selectButton" onClick={handleGoalClick}>Goals</button>
     <button className="selectButton" onClick={handleShotClick}>Shots</button>

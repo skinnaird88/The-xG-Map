@@ -19,7 +19,7 @@ const Form = ( { totalExpectedGoals, totalGoals, addNewReport } ) => {
   };
 
   const handleReportSubmit = (e) =>{
-    e.preventDefault();
+    // e.preventDefault();
     const reportData = {
       "name": name, 
       "age": age,
