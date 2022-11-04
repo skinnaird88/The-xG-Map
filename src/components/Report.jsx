@@ -6,11 +6,11 @@ const Report = ( {report} ) => {
 
     return (
       <div className='report-container'>
-        <p>Player name: {report.name}</p>
-        <p>Age: {report.age}</p>
+        <p>Player name: {report.player.name}</p>
+        <p>Age: {report.player.age}</p>
         <p>Club: {report.team.name}</p>
-        <p>Expected Goals:</p>
-        <p>Goals:</p>
+        <p>Expected Goals: {report.expectedGoals}</p>
+        <p>Goals: {report.goals}</p>
         </div>
       )
   
