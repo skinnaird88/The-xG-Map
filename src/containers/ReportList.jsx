@@ -5,7 +5,8 @@ import Report from '../components/Report'
 const ReportList = (  { allReports, setAllReports } ) => {
 
 
-  const playerReportNodes = allReports.map((report) => {
+  const playerReportNodes = allReports.map((report) => { 
+    console.log(report)
     return (
       <Report report={report} />
     )

@@ -1,5 +1,7 @@
 package com.example.thexGMapService.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 
@@ -12,6 +14,7 @@ public class Report {
     private Long Id;
 
     @ManyToOne
+    @JsonIgnoreProperties({"reports", "team"})
     @JoinColumn(name = "player_id", nullable = false)
     private Player player;
 

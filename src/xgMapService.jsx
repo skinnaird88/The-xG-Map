@@ -1,6 +1,6 @@
 import { json } from "react-router-dom"
 
-const serverUrl = "http://localhost:8080/players"
+const serverUrl = "http://localhost:8080/reports"
 
 export const getReports = () => {
     return fetch(serverUrl)
