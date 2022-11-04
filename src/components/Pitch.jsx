@@ -3,7 +3,8 @@ import ShotArea from "./ShotArea";
 import "./Pitch.css";
 const Pitch = ({ recordGoal, recordShot, addDefender, defenders }) => {
         // create array of xg value for each shot area
-        const xGValuesArrayRow1 = [0.1, 0.2, 0.3, 0.4, 0.5];
+                
+        const xGValuesArrayRow1 = [0.3, 0.6, 0.9, 0.02, 0.01];
         const xGValuesArrayRow2 = [0.3, 0.6, 0.9, 0.02, 0.01];
         const xGValuesArrayRow3 = [0.08, 0.79, 0.11, 0.5, 0.23];
         const xGValuesArrayRow4 = [0.33, 0.6, 0.7, 0.33, 0.44];

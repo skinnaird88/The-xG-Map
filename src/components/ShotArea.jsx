@@ -4,8 +4,8 @@ import './ShotArea.css'
 
 const ShotArea = ( {recordGoal, recordShot, addDefender, defenders, xGValue } ) => {
 
-  const handleClick = () => {
-    recordGoal();
+  const handleGoalClick = () => {
+    recordGoal(xGValue);
 }
 
 const handleShotClick = () => {
@@ -27,7 +27,7 @@ const handleAddDefender = () => {
     onClick={handleAddDefender}>
       <Defender addDefender={handleAddDefender} defenders={defenders}/></button>
 
-    <button className="selectButton" onClick={handleClick}>Goals</button>
+    <button className="selectButton" onClick={handleGoalClick}>Goals</button>
     <button className="selectButton" onClick={handleShotClick}>Shots</button>
     </>
     ) 

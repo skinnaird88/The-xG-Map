@@ -25,9 +25,11 @@ function App() {
     });
   }, []);
 
-  const recordGoal = () =>{
+  const recordGoal = (xGValue) =>{
     setTotalGoals(totalGoals +1);
+    setTotalExpectedGoals(totalExpectedGoals + xGValue)
     console.log("Goal count " + totalGoals)
+    console.log(xGValue)
   }
 
   const recordShot = (xgValue) =>{

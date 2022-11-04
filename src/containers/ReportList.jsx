@@ -6,7 +6,6 @@ const ReportList = (  { allReports, setAllReports } ) => {
 
 
   const playerReportNodes = allReports.map((report) => { 
-    console.log(report)
     return (
       <Report report={report} />
     )
