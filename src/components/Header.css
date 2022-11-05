@@ -1,6 +1,13 @@
-header{
-    height: 12rem;
-    background-color: green;
+.header{
+    height: 18rem;
+    background-color: brown;
     color: white;
     font-size: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+header > img{
+    height: 100%;
+    width: 4em;
 }
