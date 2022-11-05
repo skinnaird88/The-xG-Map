@@ -4,7 +4,7 @@ import './ShotArea.css'
 
 const ShotArea = ( {recordGoal, recordShot, addDefender, defenders, xGValue } ) => {
 
-  const [defnederShowNumber, setDefnederShowNumber] = useState(0)
+  const [defenderShowNumber, setDefenderShowNumber] = useState(0)
 
 
   const handleGoalClick = () => {
@@ -17,9 +17,11 @@ const handleShotClick = () => {
 }
 
 const handleAddDefender = () => {
-  if(defnederShowNumber < 3 && defenders < 3){
-    setDefnederShowNumber(defnederShowNumber + 1)
+  if(defenderShowNumber < 3 && defenders < 3){
+    setDefenderShowNumber(defenderShowNumber + 1)
     addDefender();
+    console.log("DefenderShowNumber" + defenderShowNumber)
+    console.log("Regular defenders" + defenders)
 
   }
 
@@ -31,7 +33,7 @@ const handleAddDefender = () => {
     <button 
     className="selectButton" id='defender'
     onClick={handleAddDefender}>
-      <Defender addDefender={handleAddDefender} defenders={defnederShowNumber}/></button>
+      <Defender addDefender={handleAddDefender} defenders={defenderShowNumber}/></button>
 
     <button className="selectButton" onClick={handleGoalClick}>Goals</button>
     <button className="selectButton" onClick={handleShotClick}>Shots</button>
