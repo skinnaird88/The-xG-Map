@@ -7,13 +7,13 @@ const ShotAndGoalButton = ({ totalGoals, totalExpectedGoals}) => {
     <h3>Goal and shot buttons</h3>
     <form>
 
-    <p
+    <div
     placeholder='Goals'
-    value={totalGoals}>Goals</p>
+    value={totalGoals}>Goals: {totalGoals}</div>
 
     <p
     placeholder='Expected goals' 
-    value={totalExpectedGoals}>Expected Goals</p>
+    value={totalExpectedGoals}>Expected Goals: {totalExpectedGoals}</p>
     <button>Record</button>
     <button>Reset</button>
 
