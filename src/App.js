@@ -25,11 +25,7 @@ function App() {
     });
   }, []);
 
-  // const defendersReducexGValue = () =>{
-  //   if(defenders === 1){
-  //     setTotalExpectedGoals(totalExpectedGoals * 0.8)
-  //   }
-  // }
+
 
   const recordGoal = (xGValue) =>{
     setTotalGoals(totalGoals +1);
