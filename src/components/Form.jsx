@@ -1,20 +1,27 @@
 import React, {useState, useEffect} from 'react'
-import { getPlayers } from '../xgMapService';
+import { getPlayers, getOppositionTeams } from '../xgMapService';
 import './Form.css'
 
 const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) => {
 
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
-  const [team, setTeam] = useState("");
-
+  
   const [players, setPlayers] = useState([]);
+  const [oppositionTeams, setOppositionTeams] = useState([]);
 
 
   // const [reports, setReports] = useState(allReports);
   useEffect(() => {
     getPlayers().then((data) => {
       setPlayers(data);
+    });
+  }, []);
+
+
+  useEffect(() => {
+    getOppositionTeams().then((data) => {
+      setOppositionTeams(data);
     });
   }, []);
 
@@ -27,7 +34,7 @@ const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) =>
     setAge(evt.target.value)
   };
   const handleTeamChange= (evt) => {
-    setTeam(evt.target.value)
+    setOppositionTeams(evt.target.value)
   };
 
   const handleReportSubmit = (e) =>{
@@ -36,7 +43,7 @@ const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) =>
     const reportData = {
       "name": name, 
       "age": age,
-      "team": team
+      "team": oppositionTeams
     }
     
     addNewReport(reportData)
@@ -44,13 +51,16 @@ const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) =>
 
     setName ("")
     setAge("")
-    setTeam("")
+    setOppositionTeams("")
 
   }
 
 const mapThroughAllPlayersForDropdown = players?.map((player) => {
   console.log(players)
-  return <option value={player.name}>{player.name}</option>
+  return <option value={player.id}>{player.name}: {player.team.name}</option>
+})
+const mapThroughAllOppositionTeamsForDropdown = oppositionTeams?.map((team) => {
+  return <option value={team.id}>{team.name}</option>
 })
 
 
@@ -58,16 +68,11 @@ const mapThroughAllPlayersForDropdown = players?.map((player) => {
     <div className='form-container'>
         <h3><u>Form</u></h3>
         <form onSubmit={handleReportSubmit}>
-          <select>{mapThroughAllPlayersForDropdown}</select>
-
-
-            <input placeholder='Age'
-            onChange={handleAgeChange}></input>
-
-
-            <input placeholder='Team'
-            onChange={handleTeamChange}
-            ></input>
+          <label for="name">Player: </label>
+          <select id="name" name="name">{mapThroughAllPlayersForDropdown}</select>
+            
+            <label for="opponent">Opponent: </label>
+          <select id="opponent" name="opponent">{mapThroughAllOppositionTeamsForDropdown}</select>
 
 {/* TODO: change input tags to not input tags */}
             <input placeholder='Goals'
