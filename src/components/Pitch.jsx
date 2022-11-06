@@ -9,7 +9,7 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, indexRow1, setI
         const xGValuesArrayRow2 = [0.3, 0.6, 0.9, 0.02, 0.01];
         const xGValuesArrayRow3 = [0.08, 0.79, 0.11, 0.5, 0.23];
         const xGValuesArrayRow4 = [0.33, 0.6, 0.7, 0.33, 0.44];
-        const xGValuesArrayRow5 = [0.35, 0.04, 0.4, 0.67, 0.07];
+        const xGValuesArrayRow5 = [0.8, 0.8, 0.8, 0.8, 0.8];
         // map through array to assign different xg value to each shot area
 
         // const [defenderCountArrayRow1, setDefenderCountArrayRow1] = useState([0, 0, 0, 0, 0])

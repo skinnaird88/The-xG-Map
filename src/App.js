@@ -19,32 +19,45 @@ function App() {
 
 
 
-
-
   useEffect(() => {
     getReports().then((data) => {
       setAllReports(data);
     });
   }, []);
 
-  const defendersReducexGValue = () =>{
-    if(defenders === 1){
-      setTotalExpectedGoals(totalExpectedGoals * 0.8)
-    }
-  }
+  // const defendersReducexGValue = () =>{
+  //   if(defenders === 1){
+  //     setTotalExpectedGoals(totalExpectedGoals * 0.8)
+  //   }
+  // }
 
   const recordGoal = (xGValue) =>{
     setTotalGoals(totalGoals +1);
-    setTotalExpectedGoals(totalExpectedGoals + xGValue)
-    console.log("Goal count " + totalGoals)
-    console.log(xGValue)
+    if(defenders === 1){
+      setTotalExpectedGoals(totalExpectedGoals + xGValue * 0.8)
+    }
+    else if(defenders === 2){
+      setTotalExpectedGoals(totalExpectedGoals + xGValue * 0.6)
+    }
+    else if(defenders === 3){
+      setTotalExpectedGoals(totalExpectedGoals + xGValue * 0.2)
+    }
+    else setTotalExpectedGoals(totalExpectedGoals + xGValue)
+
+    console.log("total expected goals" + totalExpectedGoals)
   }
 
-  const recordShot = (xgValue) =>{
-    // some logic with defenders affecting the amount being set below 
-    setTotalExpectedGoals(totalExpectedGoals + xgValue)
-    defendersReducexGValue()
-    console.log("xg count " + totalExpectedGoals)
+  const recordShot = (xGValue) =>{
+    if(defenders === 1){
+      setTotalExpectedGoals(totalExpectedGoals + xGValue * 0.8)
+    }
+    else if(defenders === 2){
+      setTotalExpectedGoals(totalExpectedGoals + xGValue * 0.6)
+    }
+    else if(defenders === 3){
+      setTotalExpectedGoals(totalExpectedGoals + xGValue * 0.2)
+    }
+    else setTotalExpectedGoals(totalExpectedGoals + xGValue)
   }
 
   const addDefender = () =>{
