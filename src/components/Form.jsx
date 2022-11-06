@@ -1,12 +1,24 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import { getPlayers } from '../xgMapService';
 import './Form.css'
 
-const Form = ( { totalExpectedGoals, totalGoals, addNewReport } ) => {
+const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) => {
 
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [team, setTeam] = useState("");
-  
+
+  const [players, setPlayers] = useState([]);
+
+
+  // const [reports, setReports] = useState(allReports);
+  useEffect(() => {
+    getPlayers().then((data) => {
+      setPlayers(data);
+    });
+  }, []);
+
+
 
   const handleNameChange= (evt) => {
     setName(evt.target.value)
@@ -19,7 +31,8 @@ const Form = ( { totalExpectedGoals, totalGoals, addNewReport } ) => {
   };
 
   const handleReportSubmit = (e) =>{
-    // e.preventDefault();
+    console.log(allReports)
+    e.preventDefault();
     const reportData = {
       "name": name, 
       "age": age,
@@ -35,15 +48,18 @@ const Form = ( { totalExpectedGoals, totalGoals, addNewReport } ) => {
 
   }
 
+const mapThroughAllPlayersForDropdown = players?.map((player) => {
+  console.log(players)
+  return <option value={player.name}>{player.name}</option>
+})
+
 
   return (
     <div className='form-container'>
         <h3><u>Form</u></h3>
         <form onSubmit={handleReportSubmit}>
-            <input 
-            placeholder='Player name'
-            type='text'
-            onChange={handleNameChange}></input>
+          <select>{mapThroughAllPlayersForDropdown}</select>
+
 
             <input placeholder='Age'
             onChange={handleAgeChange}></input>

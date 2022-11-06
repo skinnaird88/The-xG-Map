@@ -66,6 +66,7 @@ function App() {
           <Route path="/"
           element={
             <Dashboard
+            allReports={allReports}
             recordGoal={recordGoal}
             recordShot={recordShot}
             addDefender={addDefender}

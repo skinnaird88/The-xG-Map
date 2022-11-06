@@ -10,7 +10,8 @@ const Dashboard = ( { recordGoal,
   defenders, 
   totalExpectedGoals, 
   totalGoals,
-  addNewReport} ) => {
+  addNewReport,
+allReports} ) => {
 
   // const [indexRow1, setIndexRow1] = useState(-1);
 
@@ -25,6 +26,7 @@ const Dashboard = ( { recordGoal,
           /></div>
         <div><Key/></div>
         <div><Form
+        reports={allReports}
         totalExpectedGoals={totalExpectedGoals}
         totalGoals={totalGoals}
         addNewReport={addNewReport}/></div>

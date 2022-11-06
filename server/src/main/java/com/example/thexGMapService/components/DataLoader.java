@@ -51,6 +51,9 @@ public class DataLoader implements ApplicationRunner {
 
         Report report1 = new Report(2, 0.9, player1, team3);
         reportRepository.save(report1);
+
+        Report report2 = new Report(1, 0.5, player2, team2);
+        reportRepository.save(report2);
     }
 
 }
