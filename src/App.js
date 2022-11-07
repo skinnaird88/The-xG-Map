@@ -18,6 +18,8 @@ function App() {
   const [allReports, setAllReports] = useState([]);
 
 
+  const [buttonRecordGoals, setButtonRecordGoals] = useState(0)
+  const [buttonRecordExpectedGoals, setButtonRecordExpectedGoals] = useState(0.00)
 
   useEffect(() => {
     getReports().then((data) => {
@@ -25,7 +27,19 @@ function App() {
     });
   }, []);
 
-
+  const addGoalToButton = (xGValue) =>{
+    setButtonRecordGoals(buttonRecordGoals +1)
+    if(defenders === 1){
+      setButtonRecordGoals(buttonRecordExpectedGoals + xGValue * 0.8)
+    }
+    else if(defenders === 2){
+      setButtonRecordExpectedGoals(buttonRecordExpectedGoals + xGValue * 0.6)
+    }
+    else if(defenders === 3){
+      setButtonRecordExpectedGoals(buttonRecordExpectedGoals + xGValue * 0.2)
+    }
+    else setButtonRecordExpectedGoals(buttonRecordExpectedGoals + xGValue)
+  }
 
   const recordGoal = (xGValue) =>{
     setTotalGoals(totalGoals +1);
@@ -39,6 +53,11 @@ function App() {
       setTotalExpectedGoals(totalExpectedGoals + xGValue * 0.2)
     }
     else setTotalExpectedGoals(totalExpectedGoals + xGValue)
+
+  }
+
+  const addShotToButton = (xGValue) => {
+    if(defenders === 1)
 
   }
 
@@ -76,6 +95,9 @@ function App() {
             <Dashboard
             allReports={allReports}
             recordGoal={recordGoal}
+            addGoalToButton={addGoalToButton}
+            buttonRecordGoals={buttonRecordGoals}
+            setButtonRecordGoals={setButtonRecordExpectedGoals}
             recordShot={recordShot}
             addDefender={addDefender}
             defenders={defenders}

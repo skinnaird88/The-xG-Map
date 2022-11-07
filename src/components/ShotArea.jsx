@@ -2,13 +2,14 @@ import React, {useState}from 'react'
 import Defender from './Defender'
 import './ShotArea.css'
 
-const ShotArea = ( {recordGoal, recordShot, addDefender, defenders, xGValue } ) => {
+const ShotArea = ( {recordGoal, recordShot, addDefender, defenders, xGValue, addGoalToButton } ) => {
 
   const [defenderShowNumber, setDefenderShowNumber] = useState(0)
 
 
   const handleGoalClick = () => {
-    recordGoal(xGValue);
+    addGoalToButton(xGValue);
+    console.log("HHHHEHEHEH" + xGValue)
 }
 
 const handleShotClick = () => {
