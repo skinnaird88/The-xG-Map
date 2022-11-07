@@ -40,7 +40,6 @@ function App() {
     }
     else setTotalExpectedGoals(totalExpectedGoals + xGValue)
 
-    console.log("total expected goals" + totalExpectedGoals)
   }
 
   const recordShot = (xGValue) =>{

@@ -1,4 +1,9 @@
-#defender :hover{
+#defender:hover{
     color: white;
     background-color: aqua;
+    background-image: url('../../public/defender.png') 1px 1px;;
+}
+
+#defender{
+    cursor: url('../../public/defender.png'), 15 15, move;
 }

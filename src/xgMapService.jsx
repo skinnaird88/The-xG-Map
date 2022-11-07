@@ -1,4 +1,3 @@
-import { json } from "react-router-dom"
 
 const reportsUrl = "http://localhost:8080/reports"
 const playersUrl = "http://localhost:8080/players"
@@ -13,7 +12,10 @@ export const getReports = () => {
 export const postReport = (report) => {
     return fetch(reportsUrl, {
         method: 'POST',
-        body: JSON.stringify(report)
+        body: JSON.stringify(report),
+        headers: {
+            "content-type": "application/json"
+        }
     })
     .then(res => res.json())
 }

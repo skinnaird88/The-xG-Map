@@ -5,10 +5,13 @@ import './Form.css'
 const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) => {
 
   const [name, setName] = useState("");
-  const [age, setAge] = useState("");
+  // const [age, setAge] = useState("");
   
   const [players, setPlayers] = useState([]);
   const [oppositionTeams, setOppositionTeams] = useState([]);
+
+  const [selectedPlayerId, setSelectedPlayerId] = useState();
+  const [selectedOppositionTeam, setSelectedOppositionTeam] = useState();
 
 
   // const [reports, setReports] = useState(allReports);
@@ -27,36 +30,37 @@ const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) =>
 
 
 
-  const handleNameChange= (evt) => {
-    setName(evt.target.value)
+  const handlePlayerChange= (evt) => {
+    setSelectedPlayerId(evt.target.value)
   };
-  const handleAgeChange= (evt) => {
-    setAge(evt.target.value)
-  };
+
   const handleTeamChange= (evt) => {
-    setOppositionTeams(evt.target.value)
+    setSelectedOppositionTeam(evt.target.value)
   };
 
   const handleReportSubmit = (e) =>{
-    console.log(allReports)
     e.preventDefault();
     const reportData = {
-      "name": name, 
-      "age": age,
-      "team": oppositionTeams
+      "player": {
+        id: selectedPlayerId
+      },
+      "team": {
+        id: selectedOppositionTeam
+      },
+      "goals": totalGoals,
+      "expectedGoals" : totalExpectedGoals
     }
     
     addNewReport(reportData)
     console.log(reportData)
 
     setName ("")
-    setAge("")
+    // setAge("")
     setOppositionTeams("")
 
   }
 
 const mapThroughAllPlayersForDropdown = players?.map((player) => {
-  console.log(players)
   return <option value={player.id}>{player.name}: {player.team.name}</option>
 })
 const mapThroughAllOppositionTeamsForDropdown = oppositionTeams?.map((team) => {
@@ -69,10 +73,10 @@ const mapThroughAllOppositionTeamsForDropdown = oppositionTeams?.map((team) => {
         <h3><u>Form</u></h3>
         <form onSubmit={handleReportSubmit}>
           <label for="name">Player: </label>
-          <select id="name" name="name">{mapThroughAllPlayersForDropdown}</select>
+          <select onChange={handlePlayerChange} id="name" name="name">{mapThroughAllPlayersForDropdown}</select>
             
             <label for="opponent">Opponent: </label>
-          <select id="opponent" name="opponent">{mapThroughAllOppositionTeamsForDropdown}</select>
+          <select onChange={handleTeamChange} id="team" name="opponent">{mapThroughAllOppositionTeamsForDropdown}</select>
 
 {/* TODO: change input tags to not input tags */}
             <input placeholder='Goals'
