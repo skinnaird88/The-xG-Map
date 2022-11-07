@@ -1,6 +1,7 @@
 .report-grid{
-    display: flex;
-    flex-direction: space-between;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2rem;
     
 }
 
