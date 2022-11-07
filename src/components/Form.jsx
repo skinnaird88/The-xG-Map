@@ -1,11 +1,13 @@
 import React, {useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom';
 import { getPlayers, getOppositionTeams } from '../xgMapService';
 import './Form.css'
 
 const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) => {
 
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   // const [age, setAge] = useState("");
+  const navigate = useNavigate();
   
   const [players, setPlayers] = useState([]);
   const [oppositionTeams, setOppositionTeams] = useState([]);
@@ -54,9 +56,11 @@ const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) =>
     addNewReport(reportData)
     console.log(reportData)
 
-    setName ("")
+    navigate('/reports');
+
+    // setName ("")
     // setAge("")
-    setOppositionTeams("")
+    // setOppositionTeams("")
 
   }
 
