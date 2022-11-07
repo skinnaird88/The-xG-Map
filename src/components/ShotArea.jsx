@@ -2,21 +2,20 @@ import React, {useState}from 'react'
 import Defender from './Defender'
 import './ShotArea.css'
 
-const ShotArea = ( {recordGoal, recordShot, addDefender, defenders, xGValue, addGoalToButton, addShotToButton } ) => {
+const ShotArea = ( { handleSettingExpectedGoalsAdded, addDefender, defenders, xGValue, setIsGoal} ) => {
 
   const [defenderShowNumber, setDefenderShowNumber] = useState(0)
 
-
   const handleGoalClick = () => {
-    addGoalToButton(xGValue);
-    console.log("HHHHEHEHEH" + xGValue)
-}
+    setIsGoal();
+    handleSettingExpectedGoalsAdded(xGValue)
+
+    // TODO: rename this function to be clearler through whole prop passing processs
+  }
 
 const handleShotClick = () => {
-    addShotToButton(xGValue);
-    console.log(xGValue)
+    handleSettingExpectedGoalsAdded(xGValue)
 }
-
 const handleAddDefender = () => {
   if(defenderShowNumber < 3 && defenders < 3){
     setDefenderShowNumber(defenderShowNumber + 1)

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ShotArea from "./ShotArea";
 import "./Pitch.css";
-const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton, addShotToButton}) => {
+const Pitch = ({ handleSettingExpectedGoalsAdded, addDefender, defenders, setIsGoal }) => {
+
         // create array of xg value for each shot area
                 
         const xGValuesArrayRow1 = [0.3, 0.6, 0.9, 0.02, 0.01];
@@ -26,13 +27,11 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton
                 return (
                         <div className="box">
                                 <ShotArea
-                                        recordGoal={recordGoal}
-                                        recordShot={recordShot}
-                                        addGoalToButton={addGoalToButton}
-                                        addShotToButton={addShotToButton}
+                                        handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
                                         addDefender={addDefender}
                                         defenders={defenders}
                                         xGValue={xGValue}
+                                        setIsGoal= {setIsGoal}
                                 />
                         </div>
                 );
@@ -41,13 +40,12 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton
                 return (
                         <div className="box">
                                 <ShotArea
-                                        recordGoal={recordGoal}
-                                        recordShot={recordShot}
-                                        addGoalToButton={addGoalToButton}
-                                        addShotToButton={addShotToButton}
+                                        handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
                                         addDefender={addDefender}
                                         defenders={defenders}
                                         xGValue={xGValue}
+                                        setIsGoal= {setIsGoal}
+
                                 />
                         </div>
                 );
@@ -56,13 +54,12 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton
                 return (
                         <div className="box">
                                 <ShotArea
-                                        recordGoal={recordGoal}
-                                        recordShot={recordShot}
-                                        addGoalToButton={addGoalToButton}
-                                        addShotToButton={addShotToButton}
+                                        handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
                                         addDefender={addDefender}
                                         defenders={defenders}
                                         xGValue={xGValue}
+                                        setIsGoal= {setIsGoal}
+
                                 />
                         </div>
                 );
@@ -71,13 +68,13 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton
                 return (
                         <div className="box">
                                 <ShotArea
-                                        recordGoal={recordGoal}
-                                        recordShot={recordShot}
-                                        addGoalToButton={addGoalToButton}
-                                        addShotToButton={addShotToButton}
+                                        handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
+
                                         addDefender={addDefender}
                                         defenders={defenders}
                                         xGValue={xGValue}
+                                        setIsGoal= {setIsGoal}
+
                                 />
                         </div>
                 );
@@ -86,13 +83,12 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton
                 return (
                         <div className="box">
                                 <ShotArea
-                                        recordGoal={recordGoal}
-                                        recordShot={recordShot}
-                                        addGoalToButton={addGoalToButton}
-                                        addShotToButton={addShotToButton}
+                                        handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
                                         addDefender={addDefender}
                                         defenders={defenders}
                                         xGValue={xGValue}
+                                        setIsGoal= {setIsGoal}
+
                                 />
                         </div>
                 );

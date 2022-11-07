@@ -1,7 +1,7 @@
 import React from 'react'
 import './Key.css'
 
-const Key = ({ resetDefenders }) => {
+const Key = () => {
   return (
     <>
     <div className='keyContainer'>
@@ -13,8 +13,6 @@ const Key = ({ resetDefenders }) => {
         <img className="keyItem" src='./defender.png'></img>
         <label>Defender</label>
         </div>
-
-        <button onClick={resetDefenders}>HEHEHE</button>
         </>
     )
 }

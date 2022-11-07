@@ -5,21 +5,22 @@ import Form from '../components/Form'
 import './Dashboard.css'
 import ShotAndGoalButton from "../components/ShotAndGoalButton";
 
-const Dashboard = ( { recordGoal, 
-  recordShot, 
+const Dashboard = ( { 
   addDefender, 
   defenders, 
   totalExpectedGoals, 
   totalGoals,
   addNewReport,
-allReports,
-addShotToButton,
-setTotalExpectedGoals,
-setTotalGoals,
-addGoalToButton,
-buttonRecordGoals,
-setButtonRecordGoals,
-buttonRecordExpectedGoals} ) => {
+  allReports,
+  handleSettingExpectedGoalsAdded,
+  setIsGoal,
+  isGoalToBeAddedToTotal,
+  setIsGoalToBeAddedToTotal,
+  xGtoBeAddedToTotal,
+  setTotalGoals,
+  setTotalExpectedGoals
+
+  }) => {
 
   // const [indexRow1, setIndexRow1] = useState(-1);
 
@@ -33,21 +34,23 @@ buttonRecordExpectedGoals} ) => {
     <div className='dashboard'>
         <div><Pitch
           defenders={defenders}
-          recordGoal={recordGoal}
-          recordShot={recordShot}
-          addGoalToButton={addGoalToButton}
-          addShotToButton={addShotToButton}
+          handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
+          setIsGoal={setIsGoal}
           addDefender={addDefender}
+          
           /></div>
         <div><Key resetDefenders={resetDefenders}/></div>
         <div><ShotAndGoalButton
+        handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
+        isGoalToBeAddedToTotal={isGoalToBeAddedToTotal}
+        setIsGoalToBeAddedToTotal={setIsGoalToBeAddedToTotal}
         totalGoals={totalGoals}
+        setTotalGoals={setTotalGoals}
         totalExpectedGoals={totalExpectedGoals}
-        addGoalToButton={addGoalToButton}
-        addShotToButton={addShotToButton}
-        buttonRecordGoals={buttonRecordGoals}
-        setButtonRecordGoals={setButtonRecordGoals}
-        buttonRecordExpectedGoals={buttonRecordExpectedGoals}
+        setTotalExpectedGoals={setTotalExpectedGoals}
+        xGtoBeAddedToTotal={xGtoBeAddedToTotal}
+
+   
         /></div>
         <div><Form
         reports={allReports}

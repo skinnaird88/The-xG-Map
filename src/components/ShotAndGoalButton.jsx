@@ -2,20 +2,34 @@ import React from 'react'
 import { useState } from 'react'
 import './ShotAndGoalButton.css'
 
-const ShotAndGoalButton = ({ totalGoals, totalExpectedGoals, buttonRecordGoals, addGoalToButton, setButtonRecordGoals, addShotToButton, buttonRecordExpectedGoals}) => {
+const ShotAndGoalButton = ({setIsGoalToBeAddedToTotal,isGoalToBeAddedToTotal, totalGoals, setTotalGoals,totalExpectedGoals, setTotalExpectedGoals,xGtoBeAddedToTotal }) => {
+
+
+
+  const handleButtonSubmit = (e) => {
+    e.preventDefault();
+    // not this the other one 
+    if(isGoalToBeAddedToTotal){
+      setTotalExpectedGoals(totalExpectedGoals + xGtoBeAddedToTotal)
+      setTotalGoals(totalGoals + 1)
+    } else {
+      setTotalExpectedGoals(totalExpectedGoals + xGtoBeAddedToTotal)
+    }
+
+    setIsGoalToBeAddedToTotal(0)  
+    setTotalExpectedGoals(0.00)  
+  }
 
 
   return (
     <div className='button-container'>
     <h3>Goal and shot buttons</h3>
-    <form>
+    <form onSubmit={handleButtonSubmit}>
       <label>Goals</label>
-        <input value={buttonRecordGoals}></input>
+        {isGoalToBeAddedToTotal}
       <label>Expected goals</label>
-        <input value={buttonRecordExpectedGoals}></input>
-
-    {/* <button>Record</button>
-    <button>Reset</button> */}
+        <input value={xGtoBeAddedToTotal}></input>
+      <input type="submit"></input>
 
     </form>
         </div>
