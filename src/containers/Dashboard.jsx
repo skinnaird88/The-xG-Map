@@ -13,11 +13,13 @@ const Dashboard = ( { recordGoal,
   totalGoals,
   addNewReport,
 allReports,
+addShotToButton,
 setTotalExpectedGoals,
 setTotalGoals,
 addGoalToButton,
 buttonRecordGoals,
-setButtonRecordGoals} ) => {
+setButtonRecordGoals,
+buttonRecordExpectedGoals} ) => {
 
   // const [indexRow1, setIndexRow1] = useState(-1);
 
@@ -34,6 +36,7 @@ setButtonRecordGoals} ) => {
           recordGoal={recordGoal}
           recordShot={recordShot}
           addGoalToButton={addGoalToButton}
+          addShotToButton={addShotToButton}
           addDefender={addDefender}
           /></div>
         <div><Key resetDefenders={resetDefenders}/></div>
@@ -41,8 +44,10 @@ setButtonRecordGoals} ) => {
         totalGoals={totalGoals}
         totalExpectedGoals={totalExpectedGoals}
         addGoalToButton={addGoalToButton}
+        addShotToButton={addShotToButton}
         buttonRecordGoals={buttonRecordGoals}
         setButtonRecordGoals={setButtonRecordGoals}
+        buttonRecordExpectedGoals={buttonRecordExpectedGoals}
         /></div>
         <div><Form
         reports={allReports}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ShotArea from "./ShotArea";
 import "./Pitch.css";
-const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton}) => {
+const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton, addShotToButton}) => {
         // create array of xg value for each shot area
                 
         const xGValuesArrayRow1 = [0.3, 0.6, 0.9, 0.02, 0.01];
@@ -29,6 +29,7 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton
                                         recordGoal={recordGoal}
                                         recordShot={recordShot}
                                         addGoalToButton={addGoalToButton}
+                                        addShotToButton={addShotToButton}
                                         addDefender={addDefender}
                                         defenders={defenders}
                                         xGValue={xGValue}
@@ -43,6 +44,7 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton
                                         recordGoal={recordGoal}
                                         recordShot={recordShot}
                                         addGoalToButton={addGoalToButton}
+                                        addShotToButton={addShotToButton}
                                         addDefender={addDefender}
                                         defenders={defenders}
                                         xGValue={xGValue}
@@ -57,6 +59,7 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton
                                         recordGoal={recordGoal}
                                         recordShot={recordShot}
                                         addGoalToButton={addGoalToButton}
+                                        addShotToButton={addShotToButton}
                                         addDefender={addDefender}
                                         defenders={defenders}
                                         xGValue={xGValue}
@@ -71,6 +74,7 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton
                                         recordGoal={recordGoal}
                                         recordShot={recordShot}
                                         addGoalToButton={addGoalToButton}
+                                        addShotToButton={addShotToButton}
                                         addDefender={addDefender}
                                         defenders={defenders}
                                         xGValue={xGValue}
@@ -85,6 +89,7 @@ const Pitch = ({ recordGoal, recordShot, addDefender, defenders, addGoalToButton
                                         recordGoal={recordGoal}
                                         recordShot={recordShot}
                                         addGoalToButton={addGoalToButton}
+                                        addShotToButton={addShotToButton}
                                         addDefender={addDefender}
                                         defenders={defenders}
                                         xGValue={xGValue}

@@ -57,8 +57,16 @@ function App() {
   }
 
   const addShotToButton = (xGValue) => {
-    if(defenders === 1)
-
+    if(defenders === 1){
+      setButtonRecordGoals(buttonRecordExpectedGoals + xGValue * 0.8)
+    }
+    else if(defenders === 2){
+      setButtonRecordExpectedGoals(buttonRecordExpectedGoals + xGValue * 0.6)
+    }
+    else if(defenders === 3){
+      setButtonRecordExpectedGoals(buttonRecordExpectedGoals + xGValue * 0.2)
+    }
+    else setButtonRecordExpectedGoals(buttonRecordExpectedGoals + xGValue)
   }
 
   const recordShot = (xGValue) =>{
@@ -97,10 +105,12 @@ function App() {
             recordGoal={recordGoal}
             addGoalToButton={addGoalToButton}
             buttonRecordGoals={buttonRecordGoals}
+            addShotToButton={addShotToButton}
             setButtonRecordGoals={setButtonRecordExpectedGoals}
             recordShot={recordShot}
             addDefender={addDefender}
             defenders={defenders}
+            buttonRecordExpectedGoals={buttonRecordExpectedGoals}
             totalExpectedGoals={totalExpectedGoals}
             setTotalExpectedGoals={setTotalExpectedGoals}
             totalGoals={totalGoals}

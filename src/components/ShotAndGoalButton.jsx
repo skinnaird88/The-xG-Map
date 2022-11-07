@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './ShotAndGoalButton.css'
 
-const ShotAndGoalButton = ({ totalGoals, totalExpectedGoals, buttonRecordGoals, addGoalToButton, setButtonRecordGoals}) => {
+const ShotAndGoalButton = ({ totalGoals, totalExpectedGoals, buttonRecordGoals, addGoalToButton, setButtonRecordGoals, addShotToButton, buttonRecordExpectedGoals}) => {
 
 
   return (
@@ -12,7 +12,7 @@ const ShotAndGoalButton = ({ totalGoals, totalExpectedGoals, buttonRecordGoals, 
       <label>Goals</label>
         <input value={buttonRecordGoals}></input>
       <label>Expected goals</label>
-        <input value={totalExpectedGoals}></input>
+        <input value={buttonRecordExpectedGoals}></input>
 
     {/* <button>Record</button>
     <button>Reset</button> */}
