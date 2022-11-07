@@ -52,6 +52,18 @@ public class DataLoader implements ApplicationRunner {
         Team team6 = new Team("Manchester United Women");
         teamRepository.save(team6);
 
+        Team team7 = new Team("Crystal Palace");
+        teamRepository.save(team7);
+
+        Team team8 = new Team("Olympique de Marseille");
+        teamRepository.save(team8);
+
+        Team team9 = new Team("Eintracht Frankfurt");
+        teamRepository.save(team9);
+
+        Team team10 = new Team("Go Ahead Eagles");
+        teamRepository.save(team10);
+
         Player player3 = new Player("David Kalokoh", 19, team2);
         playerRepository.save(player3);
 
@@ -63,6 +75,18 @@ public class DataLoader implements ApplicationRunner {
 
         Player player6 = new Player("Sam Kerr", 29, team5);
         playerRepository.save(player6);
+
+        Player player7 = new Player("Michael Olise", 20, team7);
+        playerRepository.save(player7);
+
+        Player player8 = new Player("Mathis Clement", 16, team8);
+        playerRepository.save(player8);
+
+        Player player9 = new Player("Mahmut Afsar", 18, team9);
+        playerRepository.save(player9);
+
+        Player player10 = new Player("Isac Lidberg", 24, team10);
+        playerRepository.save(player10);
 
         Report report1 = new Report(2, 0.9, player1, team3);
         reportRepository.save(report1);

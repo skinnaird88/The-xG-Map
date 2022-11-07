@@ -1,6 +1,6 @@
 .header{
     height: 18rem;
-    background-color: brown;
+    background-image: linear-gradient(to right,#3F1321 , #2D4D4B);
     color: white;
     font-size: 5rem;
     display: flex;
@@ -10,4 +10,5 @@
 header > img{
     height: 100%;
     width: 4em;
+    border-radius: 25px;
 }

@@ -3,10 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { getPlayers, getOppositionTeams } from '../xgMapService';
 import './Form.css'
 
-const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) => {
+const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports, setTotalExpectedGoals, setTotalGoals } ) => {
 
-  // const [name, setName] = useState("");
-  // const [age, setAge] = useState("");
   const navigate = useNavigate();
   
   const [players, setPlayers] = useState([]);
@@ -16,7 +14,6 @@ const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) =>
   const [selectedOppositionTeam, setSelectedOppositionTeam] = useState();
 
 
-  // const [reports, setReports] = useState(allReports);
   useEffect(() => {
     getPlayers().then((data) => {
       setPlayers(data);
@@ -54,13 +51,16 @@ const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports } ) =>
     }
     
     addNewReport(reportData)
-    console.log(reportData)
+
+    setSelectedPlayerId();
+    setSelectedOppositionTeam();
+    setTotalExpectedGoals(0.00);
+    setTotalGoals(0);
+
 
     navigate('/reports');
 
-    // setName ("")
-    // setAge("")
-    // setOppositionTeams("")
+
 
   }
 

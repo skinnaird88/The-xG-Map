@@ -80,7 +80,9 @@ function App() {
             addDefender={addDefender}
             defenders={defenders}
             totalExpectedGoals={totalExpectedGoals}
+            setTotalExpectedGoals={setTotalExpectedGoals}
             totalGoals={totalGoals}
+            setTotalGoals={setTotalGoals}
             addNewReport={addNewReport}/>
           }></Route>
           <Route path="/reports"
