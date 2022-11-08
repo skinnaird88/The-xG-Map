@@ -15,8 +15,8 @@ p {
     color: #2D4D4B;
 }
 .report-row{
-    color: red;
-    height: 2.5rem;
+    color: #2D4D4B;
+    height: auto;
     width: auto;
     border: 2px solid #3f1321;
     background-color: #C0D8D6;
