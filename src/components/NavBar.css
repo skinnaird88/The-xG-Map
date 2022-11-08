@@ -7,12 +7,11 @@
     color: green;
     display: flex;
     justify-content: space-evenly;
-    /* justify-content: center; */
     align-items: center;
 }
 
 .navbar-item{
-    background-image: linear-gradient(to right,#C0D8D6 , #2D4D4B);
+    background-image: linear-gradient(to right,#3F1321 , #2D4D4B);
     height: 2rem;
     width: 8rem;
     border-style:ridge;
@@ -22,4 +21,10 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    font-family: 'LeagueSpartan';
+    font-size: larger;
+}
+
+a:visited{
+    color: #C0D8D6;
 }
