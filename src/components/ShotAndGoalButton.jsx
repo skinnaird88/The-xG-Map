@@ -15,6 +15,12 @@ const ShotAndGoalButton = ({setGoalsToBeAddedToTotal, goalsToBeAddedToTotal, tot
     setGoalsToBeAddedToTotal(0)  
     setxGtoBeAddedToTotal(0.00)
   }
+  
+  const clearForm = () => {
+    setGoalsToBeAddedToTotal(0)  
+    setxGtoBeAddedToTotal(0.00)
+
+  }
 
 
   return (
@@ -26,6 +32,7 @@ const ShotAndGoalButton = ({setGoalsToBeAddedToTotal, goalsToBeAddedToTotal, tot
       <label>Expected goals</label>
         <input value={xGtoBeAddedToTotal}></input>
       <input type="submit"></input>
+      <button onClick={clearForm}>Clear</button>
 
     </form>
         </div>

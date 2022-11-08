@@ -19,6 +19,16 @@ export const postReport = (report) => {
     })
     .then(res => res.json())
 }
+export const postPlayer = (player) => {
+    return fetch(playersUrl, {
+        method: 'POST',
+        body: JSON.stringify(player),
+        headers: {
+            "content-type": "application/json"
+        }
+    })
+    .then(res => res.json())
+}
 export const getPlayers = () => {
     return fetch(playersUrl)
         .then(res => res.json())

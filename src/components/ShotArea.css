@@ -1,9 +1,18 @@
 #defender:hover{
-    color: white;
-    background-color: aqua;
+    background-color: #8D6A9F;
     background-image: url('../../public/defender.png') 1px 1px;;
 }
 
 #defender{
     cursor: url('../../public/defender.png'), 15 15, move;
+}
+
+#goal:hover{
+    background-color: #DDA448;
+    background-image: url('../../public/defender.png') 1px 1px;;
+}
+
+#shot:hover{
+    background-color: #2D4D4B;
+    background-image: url('../../public/defender.png') 1px 1px;;
 }

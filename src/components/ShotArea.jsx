@@ -1,6 +1,7 @@
 import React, {useState}from 'react'
 import Defender from './Defender'
 import Goal from './Goal'
+import Shot from './Shot'
 import './ShotArea.css'
 
 const ShotArea = ( { handleSettingExpectedGoalsAdded, addDefender, defenders, xGValue, setIsGoal} ) => {
@@ -8,6 +9,8 @@ const ShotArea = ( { handleSettingExpectedGoalsAdded, addDefender, defenders, xG
   const [defenderShowNumber, setDefenderShowNumber] = useState(0)
 
   const [showGoalIcon, setShowGoalIcon] = useState(0);
+
+  const [showShotIcon, setShowShotIcon] = useState(0)
 
   const handleGoalClick = () => {
     setIsGoal();
@@ -18,6 +21,7 @@ const ShotArea = ( { handleSettingExpectedGoalsAdded, addDefender, defenders, xG
   }
 
 const handleShotClick = () => {
+    setShowShotIcon(showShotIcon + 1)
     handleSettingExpectedGoalsAdded(xGValue)
 }
 const handleAddDefender = () => {
@@ -44,7 +48,10 @@ const handleAddDefender = () => {
       <Goal showGoalIcon={showGoalIcon}/></button>
 
 
-    <button className="selectButton" onClick={handleShotClick}>Shots</button>
+    <button className="selectButton" id="shot"
+    onClick={handleShotClick}>
+      <Shot showShotIcon={showShotIcon}/>
+    </button>
     </>
     ) 
 }

@@ -1,8 +1,10 @@
 .keyContainer{
     width: 20rem;
-    background-color: brown;
-    color: white;
+    background-color: #C0D8D6;
+    color: #2D4D4B;
+    border-style: solid;
     border-radius: 2.5rem;
+    border-color: #2D4D4B;
     text-align: center;
 }
 

@@ -1,8 +1,9 @@
 import logo from './logo.svg';
 import Dashboard from "./containers/Dashboard"
 import ReportList from './containers/ReportList';
+import Player from './components/Player';
 import React from 'react';
-import { getReports, postReport} from './xgMapService';
+import { getReports, postReport, postPlayer, getPlayers} from './xgMapService';
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
@@ -15,15 +16,24 @@ function App() {
   const [totalGoals, setTotalGoals] = useState(0);
   const [totalExpectedGoals, setTotalExpectedGoals] = useState(0.00);
   const [defenders, setDefenders] = useState(0);
+
+  // State for reports, players and teams
   const [allReports, setAllReports] = useState([]);
+  const [allPlayers, setAllPlayers] = useState([]);
   
-  
+  // State for goal and shot button
   const [goalsToBeAddedToTotal, setGoalsToBeAddedToTotal] = useState(0)
   const [xGtoBeAddedToTotal, setxGtoBeAddedToTotal] = useState(0.00)
 
   useEffect(() => {
     getReports().then((data) => {
       setAllReports(data);
+    });
+  }, []);
+
+  useEffect(() => {
+    getPlayers().then((data) => {
+      setAllPlayers(data);
     });
   }, []);
 
@@ -59,6 +69,10 @@ function App() {
     postReport(report).then((savedReport) => setAllReports([...allReports, savedReport]))
   }
 
+  const addNewPlayer = (player) => {
+    postPlayer(player).then((savedPlayer) => setAllPlayers([...allPlayers, savedPlayer]))
+  }
+
   return (
     <div>
       <Router>
@@ -88,6 +102,16 @@ function App() {
             <ReportList 
             allReports={allReports}
             setAllReports={setAllReports}/>
+          }>
+
+          </Route>
+          <Route path="/players"
+          element={
+            <Player
+            allPlayers={allPlayers}
+            setAllPlayers={setAllPlayers}
+            addNewPlayer={addNewPlayer}
+            />
           }>
 
           </Route>
