@@ -1,9 +1,25 @@
 .navbar{
+    height: 5rem;
     background-image: linear-gradient(to right,#C0D8D6 , #2D4D4B);
-
     border-style: solid;
     border-width: 5px;
     border-color: #2D4D4B;
     color: green;
     display: flex;
+    justify-content: space-evenly;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.navbar-item{
+    background-image: linear-gradient(to right,#C0D8D6 , #2D4D4B);
+    height: 2rem;
+    width: 8rem;
+    border-style:ridge;
+    border-width: 0.5rem;
+    border-color: #2D4D4B;
+    border-radius: 25px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
