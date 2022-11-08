@@ -29,11 +29,13 @@ export const postPlayer = (player) => {
     })
     .then(res => res.json())
 }
+
+
 export const getPlayers = () => {
     return fetch(playersUrl)
         .then(res => res.json())
 }
-export const getOppositionTeams = () => {
+export const getTeams = () => {
     return fetch(teamsUrl)
         .then(res => res.json())
 }

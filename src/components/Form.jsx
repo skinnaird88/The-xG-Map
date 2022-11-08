@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom';
-import { getPlayers, getOppositionTeams } from '../xgMapService';
+import { getPlayers, getTeams } from '../xgMapService';
 import './Form.css'
 
         
@@ -23,7 +23,7 @@ import './Form.css'
 
 
   useEffect(() => {
-    getOppositionTeams().then((data) => {
+    getTeams().then((data) => {
       setOppositionTeams(data);
     });
   }, []);

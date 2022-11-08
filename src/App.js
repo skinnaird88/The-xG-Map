@@ -111,6 +111,7 @@ function App() {
             allPlayers={allPlayers}
             setAllPlayers={setAllPlayers}
             addNewPlayer={addNewPlayer}
+            // allTeams
             />
           }>
 
