@@ -27,7 +27,6 @@ const Dashboard = ( {
 
   let resetDefenders = () => {
     defenders = 0
-    console.log(defenders)
   }
 
   
