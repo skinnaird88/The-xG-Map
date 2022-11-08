@@ -25,7 +25,7 @@ const ShotAndGoalButton = ({setGoalsToBeAddedToTotal, goalsToBeAddedToTotal, tot
 
   return (
     <div className='button-container'>
-    <h3>Goal and shot buttons</h3>
+    <h2>Goal and shot buttons</h2>
     <form onSubmit={handleButtonSubmit}>
       <label>Goals</label>
         {goalsToBeAddedToTotal}

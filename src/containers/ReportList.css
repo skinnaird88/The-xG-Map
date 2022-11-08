@@ -1,11 +1,7 @@
 .report-grid{
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 2rem;
-    
+    row-gap: 1rem;    
 }
 
 
-p{
-    color: red;
-}

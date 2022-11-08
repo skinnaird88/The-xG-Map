@@ -39,7 +39,7 @@ const Dashboard = ( {
           addDefender={addDefender}
           
           /></div>
-        <div><Key resetDefenders={resetDefenders}/></div>
+        <div><Key/></div>
         <div><ShotAndGoalButton
         handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
         goalsToBeAddedToTotal={goalsToBeAddedToTotal}

@@ -6,9 +6,51 @@
     border-radius: 2.5rem;
     border-color: #2D4D4B;
     text-align: center;
+    font-family: 'LeagueSpartan';
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .keyItem{
     max-height: 7rem;
     max-width: auto;
+}
+
+div h3{
+    font-size: 3rem;
+}
+
+#goal-key{
+    height: 2.5rem;
+    width: 12rem;
+    background-color: #DDA448;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #2D4D4B;
+    font-size: 2rem;
+}
+
+#shot-key{
+    height: 2.5rem;
+    width: 12rem;
+    background-color: #2D4D4B;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #2D4D4B;
+    font-size: 2rem;
+    color: #DDA448;
+}
+
+#defender-key{
+    height: 2.5rem;
+    width: 12rem;
+    background-color: #8D6A9F;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #2D4D4B;
+    font-size: 2rem;
+    color: #C0D8D6;
 }

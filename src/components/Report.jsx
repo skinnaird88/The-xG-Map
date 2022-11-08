@@ -6,12 +6,12 @@ const Report = ( {report} ) => {
 
     return (
       <div className='report-container'>
-        <p>Player: {report.player.name} </p>
+        <p className='report-row'>Player: {report.player.name} </p>
         {/* <p>Club: {report.player.team.name}</p> */}
-        <p>Age: {report.player.age}</p>
-        <p>Opposition: {report.team.name}</p>
-        <p>Expected Goals: {report.expectedGoals}</p>
-        <p>Goals: {report.goals}</p>
+        <p className='report-row'>Age: {report.player.age}</p>
+        <p className='report-row'>Opposition: {report.team.name}</p>
+        <p className='report-row'>Expected Goals: {report.expectedGoals}</p>
+        <p className='report-row'>Goals: {report.goals}</p>
         </div>
       )
   

@@ -5,13 +5,13 @@ const Key = () => {
   return (
     <>
     <div className='keyContainer'>
-        <h3>Pitch key: </h3>
+        <h3><u>Pitch key:</u></h3>
         <img className="keyItem" src='./goal.png'></img>
-        <label>Goal</label>
+        <label id='goal-key'><b>Goal</b></label>
         <img className="keyItem" src='./shot.png'></img>
-        <label>Shot</label>
+        <label id='shot-key'><b>Shot</b></label>
         <img className="keyItem" src='./defender.png'></img>
-        <label>Defender</label>
+        <label id='defender-key'><b>Defender</b></label>
         </div>
         </>
     )

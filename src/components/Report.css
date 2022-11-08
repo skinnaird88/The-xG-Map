@@ -1,15 +1,28 @@
 .report-container{
 
     height: auto;
-    width: 20rem;
-    background-color: #C5CBD3;
+    width: 25rem;
+    background-image: linear-gradient(to right,#3f1321 , #2D4D4B);
     border-radius: 2.5rem;
     border: 2px solid #3F1321;
     align-items: center;
     text-align: center;
+    padding: 25px;
 }
 
 p {
     
     color: #2D4D4B;
+}
+.report-row{
+    color: red;
+    height: 2.5rem;
+    width: auto;
+    border: 2px solid #3f1321;
+    background-color: #C0D8D6;
+    border-radius: 25px;
+    align-items: center;
+    text-align: center;
+    font-family: 'LeagueSpartan';
+    font-size: 1.5rem;
 }
