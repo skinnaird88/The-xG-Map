@@ -49,9 +49,6 @@ function App() {
     
   }
 
-
-
-
   const addDefender = () =>{
     if(defenders <= 2){
       setDefenders(defenders +1)
@@ -72,8 +69,8 @@ function App() {
           element={
             <Dashboard
             setIsGoal={handleSetGoalToBeAddedToTotal}
-            isGoalToBeAddedToTotal={goalsToBeAddedToTotal}
-            setIsGoalToBeAddedToTotal={setGoalsToBeAddedToTotal}
+            goalsToBeAddedToTotal={goalsToBeAddedToTotal}
+            setGoalsToBeAddedToTotal={setGoalsToBeAddedToTotal}
             allReports={allReports}
             handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
             addDefender={addDefender}

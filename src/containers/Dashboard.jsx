@@ -14,8 +14,8 @@ const Dashboard = ( {
   allReports,
   handleSettingExpectedGoalsAdded,
   setIsGoal,
-  isGoalToBeAddedToTotal,
-  setIsGoalToBeAddedToTotal,
+  goalsToBeAddedToTotal,
+  setGoalsToBeAddedToTotal,
   xGtoBeAddedToTotal,
   setxGtoBeAddedToTotal,
   setTotalGoals,
@@ -43,8 +43,8 @@ const Dashboard = ( {
         <div><Key resetDefenders={resetDefenders}/></div>
         <div><ShotAndGoalButton
         handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
-        isGoalToBeAddedToTotal={isGoalToBeAddedToTotal}
-        setIsGoalToBeAddedToTotal={setIsGoalToBeAddedToTotal}
+        goalsToBeAddedToTotal={goalsToBeAddedToTotal}
+        setGoalsToBeAddedToTotal={setGoalsToBeAddedToTotal}
         totalGoals={totalGoals}
         setTotalGoals={setTotalGoals}
         setxGtoBeAddedToTotal={setxGtoBeAddedToTotal}
