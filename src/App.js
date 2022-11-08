@@ -79,6 +79,7 @@ function App() {
             addDefender={addDefender}
             defenders={defenders}
             xGtoBeAddedToTotal={xGtoBeAddedToTotal}
+            setxGtoBeAddedToTotal={setxGtoBeAddedToTotal}
             totalExpectedGoals={totalExpectedGoals}
             setTotalExpectedGoals={setTotalExpectedGoals}
             totalGoals={totalGoals}

@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './ShotAndGoalButton.css'
 
-const ShotAndGoalButton = ({setIsGoalToBeAddedToTotal,isGoalToBeAddedToTotal, totalGoals, setTotalGoals,totalExpectedGoals, setTotalExpectedGoals,xGtoBeAddedToTotal }) => {
+const ShotAndGoalButton = ({setIsGoalToBeAddedToTotal,isGoalToBeAddedToTotal, totalGoals, setTotalGoals,totalExpectedGoals, setTotalExpectedGoals,xGtoBeAddedToTotal, setxGtoBeAddedToTotal }) => {
 
 
 
@@ -17,7 +17,7 @@ const ShotAndGoalButton = ({setIsGoalToBeAddedToTotal,isGoalToBeAddedToTotal, to
     }
 
     setIsGoalToBeAddedToTotal(0)  
-    setTotalExpectedGoals(0.00)  
+    setxGtoBeAddedToTotal(0.00)  
   }
 
 

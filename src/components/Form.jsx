@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { getPlayers, getOppositionTeams } from '../xgMapService';
 import './Form.css'
 
-const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports, setTotalExpectedGoals, setTotalGoals } ) => {
+        
+        const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports, setTotalExpectedGoals, setTotalGoals, xGtoBeAddedToTotal } ) => {
 
   const navigate = useNavigate();
   

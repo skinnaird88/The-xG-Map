@@ -17,6 +17,7 @@ const Dashboard = ( {
   isGoalToBeAddedToTotal,
   setIsGoalToBeAddedToTotal,
   xGtoBeAddedToTotal,
+  setxGtoBeAddedToTotal,
   setTotalGoals,
   setTotalExpectedGoals
 
@@ -46,6 +47,7 @@ const Dashboard = ( {
         setIsGoalToBeAddedToTotal={setIsGoalToBeAddedToTotal}
         totalGoals={totalGoals}
         setTotalGoals={setTotalGoals}
+        setxGtoBeAddedToTotal={setxGtoBeAddedToTotal}
         totalExpectedGoals={totalExpectedGoals}
         setTotalExpectedGoals={setTotalExpectedGoals}
         xGtoBeAddedToTotal={xGtoBeAddedToTotal}
@@ -58,7 +60,9 @@ const Dashboard = ( {
         setTotalExpectedGoals={setTotalExpectedGoals}
         totalGoals={totalGoals}
         setTotalGoals={setTotalGoals}
-        addNewReport={addNewReport}/></div>
+        addNewReport={addNewReport}
+        xGtoBeAddedToTotal={xGtoBeAddedToTotal}
+        /></div>
     </div>
   )
 }
