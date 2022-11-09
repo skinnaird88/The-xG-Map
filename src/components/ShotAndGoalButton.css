@@ -1,9 +1,18 @@
 .button-container{
     color: red;
-    height: 30rem;
+    height: auto;
     width: 20rem;
-    border-radius: 10px;
+    border-radius: 25px;
+    font-size: 1.5rem;
     background-color: aquamarine;
+    font-family: 'LeagueSpartan';
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+h2 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

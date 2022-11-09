@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 import './ShotAndGoalButton.css'
 
 const ShotAndGoalButton = ({setGoalsToBeAddedToTotal, goalsToBeAddedToTotal, totalGoals, setTotalGoals,totalExpectedGoals, setTotalExpectedGoals,xGtoBeAddedToTotal, setxGtoBeAddedToTotal }) => {
@@ -8,7 +7,6 @@ const ShotAndGoalButton = ({setGoalsToBeAddedToTotal, goalsToBeAddedToTotal, tot
 
   const handleButtonSubmit = (e) => {
     e.preventDefault();
-// not this the other one 
     setTotalGoals(totalGoals + goalsToBeAddedToTotal)
     setTotalExpectedGoals(totalExpectedGoals + xGtoBeAddedToTotal)
 

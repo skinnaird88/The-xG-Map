@@ -1,8 +1,12 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { getTeams } from '../xgMapService'
 
 const Player = ( { allPlayers, setAllPlayers, addNewPlayer } ) => {
+
+  const navigate = useNavigate();
+
 
 const [name, setName] = useState("")
 const [age, setAge] = useState(0)
@@ -52,6 +56,8 @@ const handlePlayerFormSubmit = (evt) => {
   setAge(0)
   setName("")
   setTeamId(0)
+
+  navigate('/')
 }
 
   return (

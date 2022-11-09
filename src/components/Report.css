@@ -2,7 +2,7 @@
 
     height: auto;
     width: 25rem;
-    background-image: linear-gradient(to right,#3f1321 , #2D4D4B);
+    background-image: linear-gradient(to right,#C0D8D6 , #2D4D4B);
     border-radius: 2.5rem;
     border: 2px solid #3F1321;
     align-items: center;
@@ -19,8 +19,9 @@ p {
     height: auto;
     width: auto;
     border: 2px solid #3f1321;
-    background-color: #C0D8D6;
+    background-image: linear-gradient(to right,#2D4D4B , #3F1321);
     border-radius: 25px;
+    color: #C0D8D6;
     align-items: center;
     text-align: center;
     font-family: 'LeagueSpartan';
