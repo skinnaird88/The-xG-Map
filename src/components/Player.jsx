@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getTeams } from '../xgMapService'
+import './Player.css'
 
 const Player = ( { allPlayers, setAllPlayers, addNewPlayer } ) => {
 
@@ -57,24 +58,25 @@ const handlePlayerFormSubmit = (evt) => {
   setName("")
   setTeamId(0)
 
-  navigate('/')
+  navigate(0)
 }
 
   return (
-    <div>
-      <h1>Add player</h1>
-      <form onSubmit={handlePlayerFormSubmit}>
-        <label>Player name: </label>
+    <div className='upper-container'>
 
-        <input onChange={handleNameChange} id="name" name='name'></input>
+      <form className='player-form-container' onSubmit={handlePlayerFormSubmit}>
+        <label><u>Player name:</u></label>
 
-
-        <label>Age: </label>
-        <input onChange={handleAgeChange} id='age' name='age'></input>
+        <input className='make-these-widths-auto' onChange={handleNameChange} id="name" name='name'></input>
 
 
-        <select onChange={handleTeamChange}id='team' name='team'>{mapThroughAllTeamsForDropdown}</select>
-        <input type="submit"></input>
+        <label><u>Age:</u></label>
+        <input className='player-inputs' onChange={handleAgeChange} id='age' name='age'></input>
+
+
+        <label><u>Club:</u></label>
+        <select className='make-these-widths-auto' onChange={handleTeamChange}id='team' name='team'>{mapThroughAllTeamsForDropdown}</select>
+        <input className='player-submit-button' type="submit"></input>
       </form>
           </div>
   )

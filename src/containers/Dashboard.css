@@ -1,6 +1,32 @@
 .dashboard{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 3fr 3fr;
     gap: 3rem;
-    margin: 1rem;
+    margin: 1rem; */
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: fit-content;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
+
+.item1{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.item2{
+    margin-right: 10px;
+}
+
+.item3{
+    margin-right: 10px;
+    
+}
+
+.item4{
+    margin-top: 10px;
+    align-self: flex-start;
+    margin-right: 10px;
+} 

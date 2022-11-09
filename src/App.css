@@ -2,4 +2,8 @@ body{
   background: url('../public/stadium.png');
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  width: fit-content;
+}
+.routes{
+  width: fit-content;
 }

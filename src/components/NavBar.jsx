@@ -13,7 +13,7 @@ const NavBar = () => {
         </div>
 
         <div className='navbar-item'>
-            <a href='/players'><b>Players</b></a>
+            <a href='/players'><b>Add player</b></a>
         </div>
     
         

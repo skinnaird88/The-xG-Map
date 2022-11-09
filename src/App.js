@@ -74,7 +74,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='body'>
       <Router>
         <Header/>
         <NavBar/>

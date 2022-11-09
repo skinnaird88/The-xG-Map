@@ -32,15 +32,15 @@ const Dashboard = ( {
   
     return (
     <div className='dashboard'>
-        <div><Pitch
+        <div className="item1"><Pitch
           defenders={defenders}
           handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
           setIsGoal={setIsGoal}
           addDefender={addDefender}
           
           /></div>
-        <div><Key/></div>
-        <div><ShotAndGoalButton
+        <div className="item2"><Key/></div>
+        <div className="item3"><ShotAndGoalButton
         handleSettingExpectedGoalsAdded={handleSettingExpectedGoalsAdded}
         goalsToBeAddedToTotal={goalsToBeAddedToTotal}
         setGoalsToBeAddedToTotal={setGoalsToBeAddedToTotal}
@@ -53,7 +53,7 @@ const Dashboard = ( {
 
    
         /></div>
-        <div><Form
+        <div className="item4"><Form
         reports={allReports}
         totalExpectedGoals={totalExpectedGoals}
         setTotalExpectedGoals={setTotalExpectedGoals}
