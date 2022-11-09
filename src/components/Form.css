@@ -35,7 +35,7 @@
     background-color: #C0D8D6;
     border: 2px solid #2D4D4B;
     border-radius: 25px;
-    /* font-size: 15px; */
+    font-size: 15px;
     width: auto;
     text-align: center;
 }
@@ -45,14 +45,22 @@
     color: #2D4D4B;
     border: 2px solid #2D4D4B;
     border-radius: 25px;
-    height:2rem;
+    height: 2rem;
     width: auto;
     text-align: center;
     align-content: center;
     font-family: 'LeagueSpartan';
+    font-size: 20px;
 }
 
-form{
-    align-items: center;
-    align-content: center;
+#submit-button{
+    background-color: #DDA448;
+    border: 2px solid #2D4D4B;
+    border-radius: 25px;
+    width: 10rem;
+    height: auto;
+    font-family: 'LeagueSpartan';
+    font-size: 1.5rem;
+    color: #2D4D4B;
 }
+
