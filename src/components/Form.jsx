@@ -75,24 +75,25 @@ const mapThroughAllOppositionTeamsForDropdown = oppositionTeams?.map((team) => {
 
   return (
     <div className='form-container'>
-        <h3><u>Form</u></h3>
+        <h3 id='form-header'><u>Form</u></h3>
         <form onSubmit={handleReportSubmit}>
-          <label for="name">Player: </label>
-          <select onChange={handlePlayerChange} id="name" name="name">{mapThroughAllPlayersForDropdown}</select>
+          <p className='form-item'><u>Player: </u></p>
+          <select className="dropdowns" onChange={handlePlayerChange} id="name" name="name">{mapThroughAllPlayersForDropdown}</select>
             
-            <label for="opponent">Opponent: </label>
-          <select onChange={handleTeamChange} id="team" name="opponent">{mapThroughAllOppositionTeamsForDropdown}</select>
+            <p className='form-item'><u>Opponent: </u></p>
+          <select className="dropdowns" onChange={handleTeamChange} id="team" name="opponent">{mapThroughAllOppositionTeamsForDropdown}</select>
 
 {/* TODO: change input tags to not input tags */}
-            <input placeholder='Goals'
+          <p className='form-item'><u>Goals: </u></p>
+            <input className='form-item' id='tallies'
             value={totalGoals}
            ></input>
 
-
-            <input placeholder='Expected goals' 
+          <p className='form-item'><u>Expected Goals: </u></p>
+            <input id='tallies'
             value={totalExpectedGoals}
            ></input>
-
+           <br></br>
 
             <input type="submit"></input>
         </form>

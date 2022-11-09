@@ -1,9 +1,58 @@
 .form-container{
-    color: red;
-    height: 30rem;
+    color: #C0D8D6;
+    height: auto;
     width: 20rem;
-    border-radius: 10px;
-    background-color: aquamarine;
+    border-radius: 25px;
+    border-style:ridge;
+    border-width: 0.5rem;
+    border-color: #2D4D4B;
+    font-size: 1.5rem;
+    background-image: linear-gradient(to right,#3F1321 , #2D4D4B);
+    font-family: 'LeagueSpartan';
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+#form-header{
+    justify-content: center;
+    text-align: center;
+    padding: 0px;
+}
+
+.form-item{
+    color: #C0D8D6;
+    justify-content: center;
+    font-family: 'LeagueSpartan';
+    text-align: center;
+    padding: 0px;
+    margin: 12px;
+}
+
+.dropdowns{
+    background-color: #C0D8D6;
+    border: 2px solid #2D4D4B;
+    border-radius: 25px;
+    /* font-size: 15px; */
+    width: auto;
+    text-align: center;
+}
+
+#tallies{
+    background-color: #C0D8D6;
+    color: #2D4D4B;
+    border: 2px solid #2D4D4B;
+    border-radius: 25px;
+    height:2rem;
+    width: auto;
+    text-align: center;
+    align-content: center;
+    font-family: 'LeagueSpartan';
+}
+
+form{
+    align-items: center;
+    align-content: center;
 }
