@@ -99,6 +99,12 @@ public class DataLoader implements ApplicationRunner {
 
         Report report4 = new Report(3, 2.3, player6, team6);
         reportRepository.save(report4);
+
+        Report report5 = new Report(0, 0.35, player9, team10);
+        reportRepository.save(report5);
+
+        Report report6 = new Report(1, 0.65, player10, team9);
+        reportRepository.save(report6);
     }
 
 }
