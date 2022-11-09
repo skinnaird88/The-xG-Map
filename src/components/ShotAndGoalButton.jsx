@@ -23,14 +23,19 @@ const ShotAndGoalButton = ({setGoalsToBeAddedToTotal, goalsToBeAddedToTotal, tot
 
   return (
     <div className='button-container'>
-    <h2>Goal and shot buttons</h2>
+    <h2>Goal and shot tracker</h2>
     <form onSubmit={handleButtonSubmit}>
-      <label>Goals</label>
-        {goalsToBeAddedToTotal}
-      <label>Expected goals</label>
-        <input value={xGtoBeAddedToTotal}></input>
-      <input type="submit"></input>
-      <button onClick={clearForm}>Clear</button>
+      <p className='button-item'><u>Goals</u> </p>
+
+        <p className='button-item' id='goals'>{goalsToBeAddedToTotal}</p>
+
+      <p className='button-item'><u>Expected goals </u></p>
+        <p className='button-item' id='goals' value={xGtoBeAddedToTotal}>{xGtoBeAddedToTotal}</p>
+      
+      <div className='buttons'>
+      <input type="submit" id='buttons'></input>
+      <button onClick={clearForm} id='buttons'>Clear</button>
+      </div>
 
     </form>
         </div>
