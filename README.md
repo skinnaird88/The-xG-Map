@@ -21,4 +21,5 @@ Reports page.
 <img src="/public/reports.png" alt="reports" title="reports">
 
 Create a new player.
+
 <img src="/public/add-player.png" alt="add player" title="add player">
