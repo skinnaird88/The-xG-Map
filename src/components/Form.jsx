@@ -85,14 +85,14 @@ const mapThroughAllOppositionTeamsForDropdown = oppositionTeams?.map((team) => {
 
 {/* TODO: change input tags to not input tags */}
           <p className='form-item'><u>Goals: </u></p>
-            <input className='form-item' id='tallies'
+            <div className='form-item' id='tallies'
             value={totalGoals}
-           ></input>
+           >{totalGoals}</div>
 
           <p className='form-item'><u>Expected Goals: </u></p>
-            <input className='form-item' id='tallies'
+            <div className='form-item' id='tallies'
             value={totalExpectedGoals}
-           ></input>
+           >{totalExpectedGoals}</div>
            <br></br>
 
             <input className='form-item' id='submit-button' type="submit"></input>
