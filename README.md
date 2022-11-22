@@ -9,4 +9,7 @@ As goals and shots are recorded, the xG value and goals count increases on the g
 The form allows selection of a player and opposition team from the database. Once the completed form is submitted, it is then rendered on the reports page.
 The user is also able to create new players via the add player link in the nav bar.
 
-<img src="/public/defender.png" alt="image here" title="image">
+<img src="/public/pitch-screenshot.png" alt="pitch" title="pitch">
+<img src="/public/pitch-button-and-form.png" alt="button and form" title="form">
+<img src="/public/reports.png" alt="reports" title="reports">
+<img src="/public/add-player.png" alt="add player" title="add player">
