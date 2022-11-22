@@ -4,7 +4,7 @@ import { getPlayers, getTeams } from '../xgMapService';
 import './Form.css'
 
         
-        const Form = ( { totalExpectedGoals, totalGoals, addNewReport, allReports, setTotalExpectedGoals, setTotalGoals, xGtoBeAddedToTotal } ) => {
+        const Form = ( { totalExpectedGoals, totalGoals, addNewReport, setTotalExpectedGoals, setTotalGoals } ) => {
 
   const navigate = useNavigate();
   

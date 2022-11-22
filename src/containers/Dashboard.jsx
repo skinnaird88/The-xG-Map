@@ -23,11 +23,6 @@ const Dashboard = ( {
 
   }) => {
 
-  // const [indexRow1, setIndexRow1] = useState(-1);
-
-  let resetDefenders = () => {
-    defenders = 0
-  }
 
   
     return (
@@ -60,7 +55,6 @@ const Dashboard = ( {
         totalGoals={totalGoals}
         setTotalGoals={setTotalGoals}
         addNewReport={addNewReport}
-        xGtoBeAddedToTotal={xGtoBeAddedToTotal}
         /></div>
     </div>
   )
