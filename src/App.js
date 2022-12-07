@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Dashboard from "./containers/Dashboard"
 import ReportList from './containers/ReportList';
 import Player from './components/Player';
@@ -17,11 +16,9 @@ function App() {
   const [totalExpectedGoals, setTotalExpectedGoals] = useState(0.00);
   const [defenders, setDefenders] = useState(0);
 
-  // State for reports, players and teams
   const [allReports, setAllReports] = useState([]);
   const [allPlayers, setAllPlayers] = useState([]);
   
-  // State for goal and shot button
   const [goalsToBeAddedToTotal, setGoalsToBeAddedToTotal] = useState(0)
   const [xGtoBeAddedToTotal, setxGtoBeAddedToTotal] = useState(0.00)
 
