@@ -15,6 +15,10 @@ const NavBar = () => {
         <div className='navbar-item'>
             <a href='/players'><b>Add player</b></a>
         </div>
+
+        <div className='navbar-item'>
+            <a href='/teams'><b>Add team</b></a>
+        </div>
     
         
     </nav>

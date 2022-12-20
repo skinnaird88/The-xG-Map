@@ -6,7 +6,7 @@ import './Player.css'
 
 const Player = ( { allPlayers, setAllPlayers, addNewPlayer } ) => {
 
-  const navigate = useNavigate();
+const navigate = useNavigate();
 
 
 const [name, setName] = useState("")

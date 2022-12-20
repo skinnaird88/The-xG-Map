@@ -30,6 +30,17 @@ export const postPlayer = (player) => {
     .then(res => res.json())
 }
 
+export const postTeam = (team) => {
+    return fetch(teamsUrl, {
+        method: 'POST',
+        body: JSON.stringify(team),
+        headers: {
+            "content-type": "application/json"
+        }
+    })
+    .then(res => res.json())
+}
+
 
 export const getPlayers = () => {
     return fetch(playersUrl)
