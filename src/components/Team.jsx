@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Team.css'
 
 
 const Team = ({addNewTeam}) => {
@@ -23,17 +24,17 @@ const Team = ({addNewTeam}) => {
         }
         console.log(teamData)
         addNewTeam(teamData)
-        // setTeamName("")
-        // navigate(0)
+        setTeamName("")
+        navigate(0)
     }
 
   return (
-    <div>
-        <h1>Teams</h1>
-        <form onSubmit={handleTeamFormSubmit}>
-            <label>Team name:</label>
-            <input id="name" name="name" onChange={handleTeamNameChange}></input>
-            <input type="submit"></input>
+    <div className='upper-container'>
+
+        <form className="team-form-container" onSubmit={handleTeamFormSubmit}>
+            <label className='team-name-input'>Team name:</label>
+            <input className='team-name-input' id="name" name="name" onChange={handleTeamNameChange}></input>
+            <input className="player-submit-button"type="submit"></input>
         </form>
     </div>
   )

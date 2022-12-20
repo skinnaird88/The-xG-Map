@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { getTeams } from '../xgMapService'
 import './Player.css'
 
-const Player = ( { allPlayers, setAllPlayers, addNewPlayer } ) => {
+const Player = ( { addNewPlayer } ) => {
 
 const navigate = useNavigate();
 
