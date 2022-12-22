@@ -20,6 +20,10 @@ Tracker and report form.
 Reports page.
 <img src="/public/reports.png" alt="reports" title="reports">
 
-Create a new player.
+Add a team.
+
+<img src="/public/add-team.png" alt="add team" title="add team">
+
+Add a new player.
 
 <img src="/public/add-player.png" alt="add player" title="add player">
